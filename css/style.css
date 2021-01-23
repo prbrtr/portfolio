@@ -133,7 +133,7 @@ section.freelancer{
     text-align: center;
     color:var(--pure);
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
-    background:url(images/camera.png);
+    background:url(./images/camera.png);
     clip-path:polygon(0 0, 100% 0,100% 100%,67% 80%,0 100%);
     padding-bottom: 14rem;
 }
