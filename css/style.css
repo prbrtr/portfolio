@@ -145,6 +145,9 @@ section.about p {
     line-height: 1.9;
     margin-bottom: 2;
 }
+img.about-me-img {
+    width: 500px;
+}
 .skill-category li {
     /* background-color: var(--secondary); */
     color: var(--secondary);
@@ -213,11 +216,11 @@ section.work .card-wrapper .card .overlay {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: var(--secondary);
-    font-weight: 1000;
+    color: white; /* Changed to white for better contrast */
+    font-weight: bold; /* Changed from 1000 to bold for better compatibility */
+    font-size: 25px;
     opacity: 0;
-    text-transform: all .3s ease;
-
+    transition: opacity 0.3s ease; /* Moved transition property here for clarity */
 }
 
 section.work .card-wrapper .card:hover .overlay {
@@ -225,10 +228,16 @@ section.work .card-wrapper .card:hover .overlay {
 }
 
 section.work .card-wrapper .card .overlay a {
-    color: rgb(43, 31, 31);
+    color: rgba(43, 31, 31, 0.8); /* Adjusted link color for better visibility */
     font-family: 'Lato', sans-serif;
-
+    text-decoration: none; /* Adding text-decoration none to remove underlines from links */
+    transition: color 0.3s ease; /* Adding transition effect for smoother color change */
 }
+
+section.work .card-wrapper .card .overlay a:hover {
+    color: rgba(43, 31, 31, 1); /* Changing link color on hover for better visual feedback */
+}
+
 section.work .card-wrapper .card img {
     height: 100%;
     width: 100%;
