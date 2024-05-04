@@ -24,14 +24,14 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    -webkit-font-smotthing: antialiased;
+    -webkit-font-smoothing: antialiased;
 }
 
 header {
     background: var(--dark);
     padding-bottom: 8rem;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
 }
 
 .container {
@@ -46,13 +46,12 @@ header nav .left a {
     margin-right: 2rem;
     text-transform: uppercase;
     transition: all .3s ease;
-    
 }
-header nav .right a { 
+
+header nav .right a {
     text-decoration: none;
     color: var(--pure);
     transition: all .3s ease;
-    
 }
 
 header nav .left a:hover {
@@ -61,24 +60,21 @@ header nav .left a:hover {
 
 header nav {
     padding: 2rem 0;
-    
 }
 
 header nav .branding {
     margin-right: 2rem;
-
 }
 
 header nav .branding img {
     height: 60px;
-    width: 180;
+    width: 180px; /* Fixed missing unit */
     padding-left: 12rem;
 }
 
-
 .hero {
     padding: 3rem 0rem;
-    /* margin-top: 2rem; */
+    margin-bottom: 10rem;
 }
 
 .hero .left img {
@@ -105,7 +101,6 @@ header nav .branding img {
 
 .hero .right h1 span {
     color: var(--primary);
-
 }
 
 .hero .right p {
@@ -115,7 +110,6 @@ header nav .branding img {
 
 section {
     padding: 6rem 0;
-
 }
 
 section.about.about-me-img {
@@ -143,13 +137,10 @@ section.about p {
     font-family: 'Lato', sans-serif;
     color: var(--ternary);
     line-height: 1.9;
-    margin-bottom: 2;
+    margin-bottom: 2rem;
 }
-img.about-me-img {
-    width: 500px;
-}
+
 .skill-category li {
-    /* background-color: var(--secondary); */
     color: var(--secondary);
     padding: 1px 15px;
     display: inline-block;
@@ -157,14 +148,14 @@ img.about-me-img {
     font-family: 'Lato', sans-serif;
     color: var(--ternary);
     line-height: 1.9;
-    margin-bottom: 2;
+    margin-bottom: 2rem; /* Added unit */
 }
+
 .skill-category h4 {
     background-color: var(--primary);
     color: var(--secondary);
     padding: 5px 5px;
     border-radius: 5px;
-
 }
 
 .section-heading {
@@ -174,7 +165,7 @@ img.about-me-img {
     line-height: 0.5;
 }
 
-.section-heading+p {
+.section-heading + p {
     color: var(--ternary);
     font-family: 'Lato', sans-serif;
     margin-bottom: 1rem;
@@ -183,26 +174,22 @@ img.about-me-img {
 
 section.work {
     background: var(--light);
-    
 }
 
 .section-heading span {
     color: var(--primary);
     font-family: 'Lato', sans-serif;
-
 }
 
 section.work .card-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
-
 }
 
 section.work .card-wrapper .card {
     height: 250px;
-    position: relative
-    
+    position: relative;
 }
 
 section.work .card-wrapper .card .overlay {
@@ -216,11 +203,11 @@ section.work .card-wrapper .card .overlay {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white; /* Changed to white for better contrast */
-    font-weight: bold; /* Changed from 1000 to bold for better compatibility */
+    color: white;
+    font-weight: bold;
     font-size: 25px;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Moved transition property here for clarity */
+    transition: opacity 0.3s ease;
 }
 
 section.work .card-wrapper .card:hover .overlay {
@@ -228,14 +215,14 @@ section.work .card-wrapper .card:hover .overlay {
 }
 
 section.work .card-wrapper .card .overlay a {
-    color: rgba(43, 31, 31, 0.8); /* Adjusted link color for better visibility */
+    color: rgba(43, 31, 31, 0.8);
     font-family: 'Lato', sans-serif;
-    text-decoration: none; /* Adding text-decoration none to remove underlines from links */
-    transition: color 0.3s ease; /* Adding transition effect for smoother color change */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 section.work .card-wrapper .card .overlay a:hover {
-    color: rgba(43, 31, 31, 1); /* Changing link color on hover for better visual feedback */
+    color: rgba(43, 31, 31, 1);
 }
 
 section.work .card-wrapper .card img {
@@ -250,39 +237,42 @@ section.learning {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
     padding-bottom: 10rem;
 }
-  
-  .skill {
+
+.skill {
     display: inline-block;
     margin: 5px;
-  }
-  
-  .skill i {
-    font-size: 50px; /* Adjust icon size as needed */
+}
+
+.skill i {
+    font-size: 50px;
     margin-bottom: 5px;
-  }
-  
-  .skill p {
+}
+
+.skill p {
     margin-top: 5px;
-  }
-  .learning h2{
+}
+
+.learning h2 {
     margin: 2rem;
-  }
-  .learning i{
+}
+
+.learning i {
     color: var(--primary);
-  }
-  .learning button{
+}
+
+.learning button {
     margin: 4rem;
-    border: 2px solid #000; /* Outline color */
-  background-color: transparent;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 3rem; /* Adjust as needed */
-  transition: all 0.3s;
-    
-  }
-  .learning button a{
+    border: 2px solid #000;
+    background-color: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: all 0.3s;
+}
+
+.learning button a {
     color: rgb(43, 31, 31);
-  }
+}
 
 section.contact .card-wrapper {
     display: grid;
@@ -310,6 +300,7 @@ section.contact .card-wrapper .card h6 a {
     color: var(--ternary);
     font-weight: 400;
 }
+
 footer {
     background: var(--dark);
     text-align: center;
@@ -320,7 +311,6 @@ footer img {
     height: 70px;
     width: 150px;
     margin-bottom: 1rem;
-
 }
 
 footer .footer-socials {
@@ -337,8 +327,6 @@ footer .footer-socials a {
     margin-right: 10px;
     margin-top: 30px;
     font-size: 24px;
-
-
 }
 
 footer .copyright {
@@ -346,10 +334,8 @@ footer .copyright {
     font-family: 'Lato', sans-serif;
 }
 
-
 .site-main-wrapper {
     position: relative;
-
 }
 
 .hamberger {
@@ -359,7 +345,7 @@ footer .copyright {
     background: none;
     border: none;
     color: var(--light);
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding-top: 2rem;
     outline: none;
     cursor: pointer;
@@ -377,7 +363,6 @@ footer .copyright {
     padding: 2rem;
     transform: translatex(-100%);
     transition: all .5s ease-in-out;
-
 }
 
 .open {
@@ -392,7 +377,6 @@ footer .copyright {
     background: none;
     outline: none;
     cursor: pointer;
-
 }
 
 .times i {
@@ -401,15 +385,14 @@ footer .copyright {
 
 .mobile-nav ul {
     list-style-type: none;
-
 }
 
 .mobile-nav ul li a {
-    color: rgb(66, 56, 56);
+    color: var(--dark);
     text-decoration: none;
-    font-size: 2rem;
-    font-weight: 1000;
-    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
     line-height: 5rem;
 }
 
@@ -422,7 +405,7 @@ footer .copyright {
 /* media tags */
 @media (max-width:1024px) {
     header #main-nav {
-        display: none
+        display: none;
     }
 
     .hamberger {
@@ -453,21 +436,15 @@ footer .copyright {
     section.work .card-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
 }
 
 @media (max-width:576px) {
-
-
     .hero {
         flex-direction: column;
         padding-bottom: 600px;
-
     }
 
     header {
-
         clip-path: polygon(0 0, 100% 0, 100% 100%, 69% 95%, 0 100%);
     }
 
@@ -526,5 +503,4 @@ footer .copyright {
     section.contact .input-wrap {
         grid-template-columns: repeat(1, 1fr);
     }
-
 }
