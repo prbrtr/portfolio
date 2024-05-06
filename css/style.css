@@ -73,8 +73,7 @@ header nav .branding img {
 }
 
 .hero {
-    padding: 3rem 0rem;
-    margin-bottom: 2rem;
+    padding: 3rem 2rem;
 }
 
 .hero .left img {
@@ -422,7 +421,7 @@ footer .copyright {
 
     .hero {
         padding-top: 10rem;
-        padding-bottom: 30px;
+        padding-bottom: 450px;
     }
 
     header {
@@ -441,7 +440,6 @@ footer .copyright {
 @media (max-width:576px) {
     .hero {
         flex-direction: column;
-        padding-bottom: 60px;
     }
 
     header {
