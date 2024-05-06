@@ -307,7 +307,7 @@ footer {
 }
 
 footer img {
-    height: 70px;
+    height: 100px;
     width: 150px;
     margin-bottom: 1rem;
 }
@@ -332,6 +332,45 @@ footer .copyright {
     color: var(--ternary);
     font-family: 'Lato', sans-serif;
 }
+
+.job-opportunities {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.job-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.job-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #3dcfd3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.job-links a:hover {
+    background-color: #1e8c8e;
+}
+
 
 .site-main-wrapper {
     position: relative;
