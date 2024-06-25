@@ -1,7 +1,6 @@
 @import 'utilities.css';
 
 :root {
-    /* color reset */
     --primary: #3DCFD3;
     --secondary: black;
     --dark: #161616;
@@ -20,7 +19,6 @@ html {
 }
 
 * {
-    /* backgroun reset */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -30,7 +28,6 @@ html {
 header {
     background: var(--dark);
     padding-bottom: 8rem;
-
     clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
 }
 
@@ -68,7 +65,7 @@ header nav .branding {
 
 header nav .branding img {
     height: 60px;
-    width: 180px; /* Fixed missing unit */
+    width: 180px;
     padding-left: 12rem;
 }
 
@@ -147,7 +144,7 @@ section.about p {
     font-family: 'Lato', sans-serif;
     color: var(--ternary);
     line-height: 1.9;
-    margin-bottom: 2rem; /* Added unit */
+    margin-bottom: 2rem;
 }
 
 .skill-category h4 {
@@ -164,7 +161,7 @@ section.about p {
     line-height: 0.5;
 }
 
-.section-heading + p {
+.section-heading+p {
     color: var(--ternary);
     font-family: 'Lato', sans-serif;
     margin-bottom: 1rem;
@@ -237,40 +234,67 @@ section.learning {
     padding-bottom: 10rem;
 }
 
-.skill {
-    display: inline-block;
-    margin: 5px;
+#learning-section {
+    padding: 2rem 0;
 }
 
+h2{
+    margin-bottom: 2rem;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.skill a.button {
+    display: block;
+    text-decoration: none;
+    color: var(--pure);
+    width: 100%;
+    height: 100%;
+}
+
+.skill a.button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+
 .skill i {
-    font-size: 50px;
-    margin-bottom: 5px;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 .skill p {
-    margin-top: 5px;
+    display: inline;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
-.learning h2 {
-    margin: 2rem;
+.skill .btn-primary a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.learning i {
-    color: var(--primary);
-}
-
-.learning button {
-    margin: 4rem;
-    border: 2px solid #000;
-    background-color: transparent;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 3rem;
-    transition: all 0.3s;
-}
-
-.learning button a {
-    color: rgb(43, 31, 31);
+.skill .btn-primary:hover {
+    background-color: var(--btn-primary-bg-hover, #0056b3);
+    transform: scale(1.05);
 }
 
 section.contact .card-wrapper {
@@ -370,7 +394,6 @@ footer .copyright {
 .job-links a:hover {
     background-color: #1e8c8e;
 }
-
 
 .site-main-wrapper {
     position: relative;
@@ -474,6 +497,10 @@ footer .copyright {
     section.work .card-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width:576px) {
@@ -538,6 +565,10 @@ footer .copyright {
     }
 
     section.contact .input-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills-container {
         grid-template-columns: repeat(1, 1fr);
     }
 }
