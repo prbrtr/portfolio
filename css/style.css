@@ -297,6 +297,7 @@ h2{
     transform: scale(1.05);
 }
 
+
 section.contact .card-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -398,6 +399,61 @@ footer .copyright {
 .site-main-wrapper {
     position: relative;
 }
+.tech-articles {
+    background-color: var(--light); /* Light grey background */
+    padding: 50px 0; /* Vertical padding */
+}
+
+.articles-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items horizontally */
+    gap: 2rem; /* Space between items */
+}
+
+.article {
+    background-color: #161616; /* Primary color background for each article box */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text inside the box */
+    width: 200px; /* Fixed width for the boxes */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.article-link {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--pure); /* Text color inside the box */
+    display: flex; /* Use flexbox for layout within the box */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.article-link i {
+    font-size: 3rem; /* Size of the icon */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.article-link p {
+    font-size: 1.2rem; /* Size of the text */
+    margin: 0; /* Remove default margin */
+}
+
+.article:hover {
+    background-color: #1e8c8e; /* Darker background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+
+.section-heading {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 2rem; /* Space below the heading */
+    font-size: 2rem; /* Font size for the heading */
+    color: var(--secondary); /* Heading color */
+}
+
+.section-heading span {
+    color: var(--primary); /* Highlighted part of the heading */
+}
+
 
 .hamberger {
     position: absolute;
