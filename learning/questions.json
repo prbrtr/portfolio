@@ -1,0 +1,369 @@
+[
+    {
+        "question": "What is the purpose of if statements in Python, and how do they control the flow of a program?",
+        "answers": [
+            " If statements let you control which code runs based on specific conditions. They help manage program flow by only executing certain parts when a given condition is true."
+        ]
+    },
+    {
+        "question": " How do elif and else statements work with if statements to handle multiple conditions? Provide an example.",
+        "answers": ["elif block run when the if condition isn't met, while else covers the remaining",
+    "x = 5\nif x < 0:\n    print(\"Negative\")\nelif x == 0:\n    print(\"Zero\")\nelse:\n    print(\"Positive\")"]
+    },
+    {
+       "question":"Explain how indentation is used in Python’s control flow statements and why it is essential.",
+       "answers": ["Python relies on indentation (spaces or tabs) to define code blocks, like those under if or for. Without proper indentation, Python can’t tell where blocks start and end, leading to errors."]
+    },
+    {
+        "question": "How do elif and else statements work with if statements to handle multiple conditions? Provide an example.",
+        "answers": [
+            "elif block runs when the if condition isn't met, while else covers the remaining cases.",
+            "x = 5\nif x < 0:\n    print(\"Negative\")\nelif x == 0:\n    print(\"Zero\")\nelse:\n    print(\"Positive\")"
+        ]
+    },
+    {
+        "question": "Explain how indentation is used in Python’s control flow statements and why it is essential.",
+        "answers": [
+            "Python relies on indentation (spaces or tabs) to define code blocks, like those under if or for. Without proper indentation, Python can’t tell where blocks start and end, leading to errors."
+        ]
+    },
+    {
+        "question": "What is the syntax of a for loop in Python, and how is it commonly used with sequences?",
+        "answers": [
+            "A for loop iterates over items in a sequence, like a list, string, or range.",
+            "Example:\nfor item in sequence:\n    print(item)"
+        ]
+    },
+    {
+        "question": "What is the purpose of the range() function, and how can it be used with for loops?",
+        "answers": [
+            "range() generates a sequence of numbers, which we often use to repeat actions a set number of times or to loop through numeric ranges."
+        ]
+    },
+    {
+        "question": "Describe the difference between range(10), range(5, 10), and range(5, 10, 2).",
+        "answers": [
+            "range(10) generates numbers 0 to 9.",
+            "range(5, 10) generates numbers 5 to 9.",
+            "range(5, 10, 2) generates numbers 5, 7, and 9 (increments by 2)."
+        ]
+    },
+    {
+        "question": "What does the break statement do in a loop, and when might you use it?",
+        "answers": [
+            "Break immediately stops a loop. It’s useful for exiting when we’ve found what we need or met a condition that makes further looping unnecessary."
+        ]
+    },
+    {
+        "question": "How does the continue statement affect the flow of a loop, and how is it different from break?",
+        "answers": [
+            "Continue skips to the next iteration without finishing the current one. Unlike break, it doesn’t stop the loop completely; it just skips to the next pass."
+        ]
+    },
+    {
+        "question": "What is an else clause in a loop, and when does it get executed?",
+        "answers": [
+            "The else clause runs if the loop completes all its iterations without hitting a break. It’s a way to handle cases where we complete a loop without interruption."
+        ]
+    },
+    {
+        "question": "Explain the purpose of the pass statement and provide a scenario where it might be useful.",
+        "answers": [
+            "Pass is a placeholder—it does nothing. It’s useful when you’re writing code structure but don’t have specific actions yet. For example, in a try block where you’re just testing syntax."
+        ]
+    },
+    {
+        "question": "How does Python handle nested loops and nested if statements? Provide an example.",
+        "answers": [
+            "Python supports nested loops and if statements, meaning you can place a loop or condition inside another.",
+            "Example:\nfor i in range(3):\n    for j in range(2):\n        if i == j:\n            print(f\"i and j are equal: {i}\")"
+        ]
+    },
+    {
+        "question": "What is the purpose of the match statement introduced in Python 3.10, and how does it differ from if statements?",
+        "answers": [
+            "The match statement does pattern matching, allowing us to check if data fits a specific structure or pattern. This approach can simplify complex conditionals compared to if statements."
+        ]
+    },
+    {
+        "question": "*********************************************************************************************",
+        "answers": [
+            "****************************************************************************************************8"
+        ]
+    },
+    {
+        "question": "What is Deep Copy and Shallow Copy?",
+        "answers": [
+            "In Python, Shallow Copy creates a new object but still references the original data inside it. So, changes to the shallow copy affect the original object. A Deep Copy makes a completely independent copy of the original object, including all nested objects. Changes made to the deep copy don't affect the original object. ",
+            "code_example : \nimport copy\noriginal_list = [[1, 2], [3, 4]]\nshallow_copy = copy.copy(original_list)\ndeep_copy = copy.deepcopy(original_list)\nshallow_copy[0][0] = 100\ndeep_copy[1][0] = 200\nprint(\"Original:\", original_list)   # [[100, 2], [3, 4]]\nprint(\"Shallow:\", shallow_copy)     # [[100, 2], [3, 4]]\nprint(\"Deep:\", deep_copy)           # [[1, 2], [200, 4]]\nHere, changing the shallow copy affects the original, but changing the deep copy does not."
+        ]
+    },
+    {
+        "question": "Authorization vs. Authentication?",
+        "answers": [
+            "Authentication is the process of verifying the identity of a user or system. It answers the question, \"Who are you?\" This is typically done through methods such as usernames and passwords, biometrics, or security tokens. ",
+            "Authorization, on the other hand, determines what an authenticated user or system is allowed to do. It answers the question, \"What are you allowed to do?\" Authorization is concerned with permissions and access control, defining what resources or actions an authenticated user can access or perform."
+        ]
+    },
+    {
+        "question": "List vs Tuple?",
+        "answers": [
+            "List:\n• Mutable: Can be modified after creation (e.g., add/remove elements).\n• Memory: It's slower than tuple.\n• Syntax: Square brackets [].\n• Example: my_list = [1, 2, 3]\n\nTuple:\n• Immutable: Cannot be modified after creation.\n• Memory: It's faster than list.\n• Syntax: Parentheses ().\n• Example: my_tuple = (1, 2, 3)"
+        ]
+    },
+    {
+        "question": "Push vs Pop?",
+        "answers": [
+            "Push: \n\u2022 Adds an element to the top of a stack.  \n\u2022 Example: stack.append(10) \nPop: \n\u2022 Removes and returns the top element from the stack.  \n\u2022 Example: top_element = stack.pop()"
+        ]
+    },
+    {
+        "question": "Implicit Wait vs Explicit Wait?",
+        "answers": [
+            "Implicit Wait: \n\u2022 WebDriver waits for a specified time for an element before throwing an exception. \n\u2022 Applies to all elements globally in the script. \n\u2022 Example: driver.implicitly_wait(10) Explicit Wait: \n\u2022 WebDriver waits for a specific condition (e.g., element being clickable). \n\u2022 Targeted to specific elements. \n\u2022 Example: element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'submit')))"
+        ]
+    },
+    {
+        "question": "XPath vs CSS Selector?",
+        "answers": [
+            "XPath: \n\u2022 Can navigate through elements in an XML structure. \n\u2022 Example: element = driver.find_element_by_xpath(\"//div[@id='content']\") CSS Selector: \n\u2022 Generally faster and preferred for locating elements based on style attributes. \n\u2022 Example: element = driver.find_element_by_css_selector(\"div#content\")"
+        ]
+    },
+    {
+        "question": "Page Object Model (POM)?",
+        "answers": [
+            "A design pattern in Selenium that creates an object repository for storing all web elements. It improves code maintenance and reduces code duplication by representing UI elements as objects."
+        ]
+    },
+    {
+        "question": "Fibonacci Series?",
+        "answers": [
+            "A sequence where each number is the sum of the two preceding ones, starting from 0 and 1. ",
+            "Example: def fibonacci(n):\n    a, b = 0, 1\n    sequence = []\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence\n\nprint(fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+        ]
+    },
+    {
+        "question": "Remove Vowels from a String?",
+        "answers": [
+            "Remove all vowels from a given string. ",
+            "Example: def remove_vowels(s):\n    vowels = \"aeiouAEIOU\"\n    return ''.join([char for char in s if char not in vowels])\n\nprint(remove_vowels(\"Automation Testing\"))  # Output: \"tmtnTstng\""
+        ]
+    },
+    {
+        "question": "Return Sum of Even Numbers?",
+        "answers": [
+            "Calculate the sum of all even numbers in a given list. ",
+            "Example: def sum_of_evens(lst):\n    return sum(num for num in lst if num % 2 == 0)\n\nprint(sum_of_evens([1, 2, 3, 4, 5, 6]))  # Output: 12"
+        ]
+    },
+    {
+        "question": "Binary Tree?",
+        "answers": [
+            "A data structure where each node has at most two children. Used for efficient searching and sorting.",
+            "Binary tree :   3  /\\ 6 8 List of nodes : [Node(3), Node(6), Node(8)] Inorder of nodes : [Node(6), Node(3), Node(8)] Size of tree : 3",
+            "More:https://www.javatpoint.com/binary-tree"
+        ]
+    },
+    {
+        "question": "Heap Tree?",
+        "answers": [
+            "A special type of binary tree where the parent node is either greater (max heap) or less (min heap) than its children. Used to implement priority queues.",
+            "More:https://www.geeksforgeeks.org/min-heap-in-python/"
+        ]
+    },
+    {
+        "question": "Find Largest Number in Linked List?",
+        "answers": [
+            "Iterate through the linked list to find the largest number. ",
+            "Example: class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\ndef find_largest(head):\n    largest = head.data\n    while head:\n        if head.data > largest:\n            largest = head.data\n        head = head.next\n    return largest\n\n# Linked list: 1 -> 5 -> 3 -> 9 -> 2\nhead = Node(1)\nhead.next = Node(5)\nhead.next.next = Node(3)\nhead.next.next.next = Node(9)\nhead.next.next.next.next = Node(2)\n\nprint(find_largest(head))  # Output: 9"
+        ]
+    },
+    {
+        "question": "Extract Numbers from String Using Regex and Sum Them?",
+        "answers": [
+            "Use regular expressions to find all numbers in a string and sum them. ",
+            "Example: import re\ndef sum_numbers(s):\n    numbers = re.findall(r'\\d+', s)\n    return sum(map(int, numbers))\n\ns = \"giuwh55kdhkuw88nsbhksw51545\"\nprint(sum_numbers(s))  # Output: 51688"
+        ]
+    },
+    {
+        "question": "What is a Generator?",
+        "answers": [
+            "A generator is a function that returns an iterator that yields a sequence of values using the yield keyword. ",
+            "Example: def my_generator():   yield 1   yield 2   yield 3 gen = my_generator() print(next(gen))  # Output: 1 print(next(gen))  # Output: 2"
+        ]
+    },
+    {
+        "question": "What is an Interface?",
+        "answers": [
+            "An interface in Python is often represented by abstract base classes (ABCs) in the abc module. An interface contains abstract methods that must be implemented by any class that inherits it."
+        ]
+    },
+    {
+        "question": "Selenium Testing Types?",
+        "answers": [
+            "Functional Testing: \n\u2022 Smoke Testing: Basic tests to check if the application build is stable and can proceed with further testing. \n\u2022 Sanity Testing: Verifies that specific functionalities work correctly after changes or bug fixes. \n\u2022 Regression Testing: Ensures that new changes have not adversely affected existing functionalities. \n\u2022 Database Testing: Validates data integrity and correctness in the database. \n\u2022 Compatibility Testing: Checks the application\n\u2019s compatibility with different operating systems, browsers, and devices. \n\u2022 Cross-Browser Testing: Ensures that the application works correctly across different web browsers. Unit Testing: \n\u2022 Focuses on testing individual components or units of code for correctness. Parallel Testing: \n\u2022 Involves executing multiple test cases simultaneously across different environments to speed up the testing process. Data-Driven Testing: \n\u2022 Tests the application with multiple sets of data to ensure it behaves correctly with different inputs."
+        ]
+    },
+    {
+        "question": "Sanity Testing vs. Regression Testing?",
+        "answers": [
+            "Sanity Testing: \n\u2022 Purpose: Verifies that specific functionalities are working correctly after changes. \n\u2022 Scope: Narrow and focused on particular functionalities or bug fixes. \n\u2022 Execution: Often done after receiving a new build or bug fix. Regression Testing: \n\u2022 Purpose: Ensures that recent code changes have not introduced new bugs in existing functionalities. \n\u2022 Scope: Broad and covers all or most of the application\n\u2019s functionalities. \n\u2022 Execution: Performed after bug fixes, updates, or changes in the application."
+        ]
+    },
+    {
+        "question": "Fetch List of City Names from Dropdown Using Selenium?",
+        "answers": [
+            "Example: from selenium import webdriver from selenium.webdriver.support.ui import Select # Set up the WebDriver driver = webdriver.Chrome() driver.get('URL_OF_YOUR_PAGE') # Locate the dropdown element dropdown = Select(driver.find_element_by_id('dropdown_id')) # Fetch all city names from the dropdown city_names = [option.text for option in dropdown.options] print(city_names) # Close the WebDriver driver.quit()"
+        ]
+    },
+    {
+        "question": "Types of Exceptions in Selenium?",
+        "answers": [
+            "\n\u2022 NoSuchElementException: Raised when an element cannot be found. \n\u2022 TimeoutException: Raised when an element does not appear within the specified time. \n\u2022 ElementNotInteractableException: Raised when an element is not interactable. \n\u2022 StaleElementReferenceException: Raised when a reference to an element is stale. \n\u2022 InvalidSelectorException: Raised when a selector is invalid."
+        ]
+    },
+    {
+        "question": "Handling Iframes in Selenium?",
+        "answers": [
+            "Example: from selenium import webdriver # Set up the WebDriver driver = webdriver.Chrome() driver.get('URL_OF_YOUR_PAGE') # Switch to the iframe driver.switch_to.frame('iframe_id_or_name') # Perform actions inside the iframe element = driver.find_element_by_id('element_id') element.click() # Switch back to the main content driver.switch_to.default_content() # Close the WebDriver driver.quit()"
+        ]
+    },
+    {
+        "question": "PUT vs. POST in API Testing?",
+        "answers": [
+            "PUT: \n\u2022 Purpose: Updates or replaces a resource at a specific URL. \n\u2022 Idempotent: Multiple identical requests result in the same state. \n\u2022 Usage: When updating or creating a resource with a specific identifier. POST: \n\u2022 Purpose: Submits data to create a new resource. \n\u2022 Non-idempotent: Multiple identical requests may create multiple resources. \n\u2022 Usage: When creating a new resource or submitting data to be processed."
+        ]
+    },
+    {
+        "question": "Locators in Selenium?",
+        "answers": [
+            "\n\u2022 ID: find_element_by_id('element_id') \n\u2022 Name: find_element_by_name('element_name') \n\u2022 Class Name: find_element_by_class_name('class_name') \n\u2022 Tag Name: find_element_by_tag_name('tag_name') \n\u2022 Link Text: find_element_by_link_text('link_text') \n\u2022 Partial Link Text: find_element_by_partial_link_text('partial_text') \n\u2022 XPath: find_element_by_xpath('//tag[@attribute=\"value\"]') \n\u2022 CSS Selector: find_element_by_css_selector('tag#id.class')"
+        ]
+    },
+    {
+        "question": "Play YouTube Video with Selenium?",
+        "answers": [
+            "Example: from selenium import webdriver # Set up the WebDriver driver = webdriver.Chrome() driver.get('URL_OF_YOUR_YOUTUBE_VIDEO') # Locate and click the play button play_button = driver.find_element_by_xpath('//button[@class=\"ytp-play- button ytp-button\"]') play_button.click() # Keep the browser open input(\"Press Enter to exit...\") # Close the WebDriver driver.quit()"
+        ]
+    },
+    {
+        "question": "unittest vs pytest?",
+        "answers": [
+            "unittest: \n\u2022 Benefits: Built-in module, well-integrated with Python, supports test discovery. \n\u2022 Disadvantages: Verbose syntax, less flexible compared to pytest. ",
+            "Example: import unittest class TestExample(unittest.TestCase):   def test_addition(self):     self.assertEqual(1 + 1, 2) if __name__ == '__main__':   unittest.main() ",
+            "pytest: \n\u2022 Benefits: Simple and easy syntax, supports fixtures, detailed reporting, and rich plugin ecosystem. \n\u2022 Disadvantages: Requires installation, might be less familiar to those used to unittest. ",
+            "Example: def test_addition():   assert 1 + 1 == 2"
+        ]
+    },
+    {
+        "question": "Embedded Systems: Raspberry Pi, Arduino, and Pin Configuration?",
+        "answers": [
+            "Raspberry Pi: \n\u2022 Description: A small, affordable computer used for various projects. \n\u2022 Pin Configuration: GPIO pins for interfacing with external hardware (e.g., LEDs, sensors). Example: import RPi.GPIO as GPIO GPIO.setmode(GPIO.BCM) GPIO.setup(18, GPIO.OUT) GPIO.output(18, GPIO.HIGH) Arduino: \n\u2022 Description: A microcontroller board used for building electronic projects. \n\u2022 Pin Configuration: Digital and analog pins for input/output operations. Example: void setup() { pinMode(13, OUTPUT); } void loop() { digitalWrite(13, HIGH); delay(1000); digitalWrite(13, LOW); delay(1000); }"
+        ]
+    },
+    {
+        "question": "Create Python File with Setup and Teardown Example?",
+        "answers": [
+            "Example: import unittest\nclass TestExample(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        print(\"Setup for the entire test class.\")\n\n    def setUp(self):\n        print(\"Setup for individual test.\")\n\n    def test1(self):\n        print(\"Running test1\")\n\n    def tearDown(self):\n        print(\"Teardown for individual test.\")\n\n    @classmethod\n    def tearDownClass(cls):\n        print(\"Teardown for the entire test class.\")\n\nif __name__ == '__main__':\n    unittest.main()\n\nExplanation:\n• setUpClass and tearDownClass are class methods that run once before and after all tests in the class.\n• setUp and tearDown methods run before and after each test method."
+        ]
+    },
+    {
+        "question": "API Testing, Models, Admin, and Types of APIs?",
+        "answers": [
+            "API Testing:\n• Definition: Verifies that APIs function correctly, handling requests and responses as expected.\n\nModels:\n• Definition: Define the structure of the data handled by the API, including data validation and relationships.\n\nAdmin:\n• Definition: Refers to administrative operations or management functionalities within the API or application.\n\nTypes of APIs:\n• REST API: Uses HTTP requests for CRUD operations.\n• SOAP API: Uses XML-based messaging protocol.\n• GraphQL: Allows querying specific data requirements.\n\nExample: import requests\nresponse = requests.get('https://api.example.com/resource')\nprint(response.json())"
+        ]
+    },
+    {
+        "question": "How do you test adding items to the cart on Flipkart using Selenium and Python?",
+        "answers": [
+            "To test adding items to the cart on Flipkart using Selenium and Python, follow these steps: 1. Setup: Ensure you have Selenium and a compatible WebDriver installed. 2. Python Test Script with Selenium: ",
+            "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.common.keys import Keys\nimport unittest\nimport time\n\nclass TestFlipkartCart(unittest.TestCase):\n    def setUp(self):\n        # Initialize the WebDriver (Chrome in this case)\n        self.driver = webdriver.Chrome()\n        self.driver.get(\"https://www.flipkart.com\")\n\n    def test_add_top_selling_item_to_cart(self):\n        driver = self.driver\n        # Close the login popup\n        time.sleep(2)  # Allow time for the popup to load\n        close_button = driver.find_element(By.CSS_SELECTOR, \"button._2KpZ6l._2doB4z\")\n        close_button.click()\n        # Search for top-selling cameras\n        search_box = driver.find_element(By.NAME, \"q\")\n        search_box.send_keys(\"top selling camera\")\n        search_box.send_keys(Keys.RETURN)\n        # Wait for results to load\n        time.sleep(5)\n        # Try to click on the first item in the search results\n        try:\n            first_item = driver.find_element(By.XPATH, \"//div[@data-id][1]\")\n            first_item.click()\n            time.sleep(5)\n            # Try to click 'Add to Cart' button\n            try:\n                add_to_cart_button = driver.find_element(By.XPATH, \"//button[text()='ADD TO CART']\")\n                add_to_cart_button.click()\n                time.sleep(5)\n                # Check if item has been added to the cart\n                cart_message = driver.find_element(By.CSS_SELECTOR, \"span._2YxCDZ\")\n                print(cart_message.text)\n            except Exception as e:\n                print(f\"Failed to add item to cart: {e}\")\n        except Exception as e:\n            print(f\"Failed to find or click on the item: {e}\")\n\n        # Try to search for top-selling books\n        search_box = driver.find_element(By.NAME, \"q\")\n        search_box.clear()\n        search_box.send_keys(\"top selling book\")\n        search_box.send_keys(Keys.RETURN)\n        # Wait for results to load\n        time.sleep(5)\n        # Try to click on the first item in the search results\n        try:\n            first_item = driver.find_element(By.XPATH, \"//div[@data-id][1]\")\n            first_item.click()\n            time.sleep(5)\n            # Try to click 'Add to Cart' button\n            try:\n                add_to_cart_button = driver.find_element(By.XPATH, \"//button[text()='ADD TO CART']\")\n                add_to_cart_button.click()\n                time.sleep(5)\n                # Check if item has been added to the cart\n                cart_message = driver.find_element(By.CSS_SELECTOR, \"span._2YxCDZ\")\n                print(cart_message.text)\n            except Exception as e:\n                print(f\"Failed to add item to cart: {e}\")\n        except Exception as e:\n            print(f\"Failed to find or click on the item: {e}\")\n\n    def tearDown(self):\n        # Close the WebDriver\n        self.driver.quit()\n\nif __name__':\n    unittest.main()\n\nThis script performs the following actions:\n- Initializes the WebDriver and opens Flipkart.\n- Closes the login popup.\n- Searches for top-selling cameras and books.\n- Attempts to add the first search result item to the cart.\n- Prints the cart message to verify that the item has been added."
+        ]
+    },
+    {
+        "question": "How can you find repeating words in a text using Python?",
+        "answers": [
+            "To find repeating words in a text using Python, you can use the collections.Counter class to count the occurrences of each word. Here's a simple example:\n\nfrom collections import Counter\ndef find_repeating_words(text):\n    \"\"\"Find repeating words in a given text.\"\"\"\n    words = text.split()\n    word_count = Counter(words)\n    return {word: count for word, count in word_count.items() if count > 1}\n\ntext = \"this is a test this test is only a test\"\nprint(find_repeating_words(text))\n\nThis script will output: {'this': 3, 'test': 3, 'is': 2, 'a': 2}"
+        ]
+    },
+    {
+        "question": "How can you print each character of a string in a Shell script?",
+        "answers": [
+            "To print each character of a string in a Shell script, you can use a loop to iterate over each character. Here\n\u2019s an ",
+            "example: #!/bin/bash\n# Print each character of a string\nstring=\"Hello\"\nfor (( i=0; i<${#string}; i++ )); do\n    echo \"${string:$i:1}\"\ndone"
+        ]
+    },
+    {
+        "question": "How do you sort an array [0, 1, 3, 4] using Python and Shell script?",
+        "answers": [
+            "In Python, you can sort an array as follows: numbers = [0, 1, 3, 4] sorted_numbers = sorted(numbers) print(sorted_numbers) This will output: [0, 1, 3, 4] In Shell script, you can sort an array as follows: #!/bin/bash # Sort an array arr=(0 1 3 4) sorted_arr=($(for i in \"${arr[@]}\"; do echo $i; done | sort -n)) echo \"${sorted_arr[@]}\""
+        ]
+    },
+    {
+        "question": "How do you check if a string is a palindrome in Python?",
+        "answers": [
+            "To check if a string is a palindrome in Python, you can use the following function: ",
+            "def is_palindrome(s): \"\"\"Check if a string is a palindrome.\"\"\" return s == s[::-1] print(is_palindrome(\"radar\"))  # Output: True print(is_palindrome(\"hello\"))  # Output: False"
+        ]
+    },
+    {
+        "question": "How do you create a lambda function to add two numbers in Python?",
+        "answers": [
+            "To create a lambda function for adding two numbers, you can use the following code: ",
+            "# Lambda function to add two numbers add = lambda x, y: x + y print(add(5, 3))  # Output: 8"
+        ]
+    },
+    {
+        "question": "How do you demonstrate OOP inheritance with Python?",
+        "answers": [
+            "Inheritance allows us to define a class that inherits all the methods and properties from another class. Parent class isthe class being inherited from, also called base class.  Child class is the class that inherits from another class,  also called derived class.",
+            "Here’s an example demonstrating OOP inheritance in Python:\n\n# Base class\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def speak(self):\n        return \"Some sound\"\n\n# Derived class\nclass Dog(Animal):\n    def speak(self):\n        return \"Woof\"\n\n# Creating an instance of Dog\nmy_dog = Dog(\"Buddy\")\nprint(my_dog.name)  # Output: Buddy\nprint(my_dog.speak())  # Output: Woof"
+        ]
+    },
+    {
+        "question": "What is the difference between a hard link and a soft link?",
+        "answers": [
+            "Hard Link Definition: A hard link is a directory entry that associates a file name with an inode. It points directly to the file's inode. Characteristics: Shares the same inode number as the original file. Changes to the file are reflected in all hard links. The file is only deleted when all hard links are removed. Cannot span different filesystems or be created for directories (except by root in some cases). Example: # Create a file echo \"Hello World\" > original.txt # Create a hard link ln original.txt hardlink.txt # Both files are identical cat original.txt    # Outputs: Hello World cat hardlink.txt    # Outputs: Hello World Soft Link (Symbolic Link) Definition: A soft link (or symbolic link) is a special file that contains a reference to another file or directory in the form of a path. Characteristics: Has a different inode number and stores the path to the target file. Becomes a broken link if the original file is moved or deleted. Can span different filesystems and link to directories. Example: # Create a file echo \"Hello World\" > original.txt # Create a soft link ln -s original.txt softlink.txt # The soft link points to the original file cat softlink.txt    # Outputs: Hello World"
+        ]
+    },
+    {
+        "question": "How do you run a command on Server 1 from Server 2 using SSH?",
+        "answers": [
+            "To run a command on Server 1 from Server 2 using SSH, use the following command: ssh user@server1 \"your-command-here\" # Example: Check disk usage on Server 1 ssh user@server1 \"df -h\" Explanation: user is the username on Server 1. server1 is the hostname or IP address of Server 1. \"your-command-here\" is the command you want to execute on Server 1. Optional for Automation: Set up SSH key-based authentication to avoid entering a password each time: 1. Generate SSH Key Pair on Server 2: ssh-keygen -t rsa -b 2048 2. Copy the Public Key to Server 1: ssh-copy-id user@server1 3. Run Commands Without Password: ssh user@server1 \"your-command-here\""
+        ]
+    },
+    {
+        "question": "Solve through regular expression, lambda expression, and normal with Python.'welcome'>>'wlcom',[a, aa, aaa, aaaa]>>[1a, 2a, 3a, 4a],[ab12, ab13, bda53, abv65]>>[ab, ab, bda, abv],x = {a:6, b:7}, y = {c:5, a:8}>>{a:14, b:7, c:5}",
+        "answers": [
+            "Normal Python: result = ''.join([ch for ch in 'welcome' if ch not in 'aeiou']) Lambda: result = ''.join(list(filter(lambda ch: ch not in 'aeiou', 'welcome'))) Regex: import re result = re.sub(r'[aeiou]', '', 'welcome')",
+            "Normal Python: result = [f'{i + 1}a' for i in range(len(['a', 'aa', 'aaa', 'aaaa']))] Lambda: result = list(map(lambda i: f'{i + 1}a', range(len(['a', 'aa', 'aaa', 'aaaa'])))",
+            "Normal Python: result = [i[:3] for i in ['ab12', 'ab13', 'bda53', 'abv65']] Lambda: result = list(map(lambda s: s[:3], ['ab12', 'ab13', 'bda53', 'abv65'])) Regex: import re result = [re.match(r'[a-z]+', i).group() for i in ['ab12', 'ab13', 'bda53', 'abv65']]",
+            "Normal Python: x = {'a': 6, 'b': 7} y = {'c': 5, 'a': 8} result = {k: x.get(k, 0) + y.get(k, 0) for k in set(x) | set(y)} Lambda: result = {k: (lambda a, b: a + b if a and b else a or b)(x.get(k), y.get(k)) for k in set(x) | set(y)}"
+        ]
+    },
+    {
+        "question": "Print the pattern: 1 12 123 321 4321 12345 ",
+        "answers": [
+            "for i in range(1, 6): print(''.join(map(str, range(1, i + 1)))) if i >= 3: print(''.join(map(str, range(i, 0, -1))))"
+        ]
+    },
+    {
+        "question": "Str1 = 'UST is software company located in Whitefield. You can come by metro from pattandur agrahara. And by bus also'Str2 = 'you can enter through Nexus mall' 1. Common words in both strings 2. Remove duplicate words from both strings 3. Print output vertically and horizontally  ",
+        "answers": [
+            "1. Common words: str1_words = set(Str1.lower().split()) str2_words = set(Str2.lower().split()) common_words = str1_words.intersection(str2_words) print(common_words) 2. Remove duplicates: unique_str1 = ' '.join(set(Str1.split())) unique_str2 = ' '.join(set(Str2.split())) print(unique_str1) print(unique_str2) 3. Vertical & Horizontal print: # Horizontal print(f\"Horizontal:\\ {unique_str1} \\ {unique_str2}\") # Vertical print(\"\\ Vertical:\") for word in unique_str1.split(): print(word)"
+        ]
+    },
+    {
+        "question": "Write python code for Prime number ",
+        "answers": [
+            "num = input() prime=True for i in range(2,num):     if num%i==0:         prime=False if prime:     print(\"Number is prime\")"
+        ]
+    },
+    {
+        "question": "What is encapsulation, And how to achieve",
+        "answers": [
+            "Encapsulation is a process of wrapping data  protect it from outside controls, there  two type of access controls, one is private(can  accessed by '__') and protected (accessed  '_')",
+            " #code: class Encaps:     def __init__(self):         self._a='protected'         self.__b='private'         self.c='normal'     def inside_class(self):         print(f'Inside class {self._a},{self.__b},{self.c}')  obj = Encaps() obj.inside_class() print(obj._a) print(obj.__b)  Output: Inside class protected,private,normal protected Traceback (most recent call last): File.py, line 26, in <module>     print(obj.__b) AttributeError: 'Encaps' object has no attribute '__b'  "
+        ]
+    }
+]
