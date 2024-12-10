@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- javascript -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://www.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://www.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Portfolio</title>
+    <link rel="icon" type="../image/roy" href="../images/roy.png">
+
+
+</head>
+
+<body>
+    <div class="site-main-wrapper">
+        <button class="hamberger">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="mobile-nav">
+            <button class="times"><i class="fa fa-close"></i></button>
+            <ul>
+                <li><img src="../images/roy.png" href="../index.html" alt=""></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../job-opportunities/index.html">Jobs</a></li>
+                <li> <a href="#">Learning</a></li>
+                <li> <a href="#question-section">Interview Prep</a> </li>
+                <li> <a href="#footer-socials">Contact Me</a> </li>
+            </ul>
+        </div>
+        <header>
+            <div class="container">
+                <nav id="main-nav" class="flex items-center">
+                    <div class="left flex items-center">
+                        <div class="branding ">
+                            <img src="images/roy.png" alt="">
+                        </div>
+                        <div>
+                            <a href="../index.html">Home</a>
+                            <a href="../job-opportunities/index.html">Jobs</a>
+                            <a href="#">Learning</a>
+                            <a href="#question-section">Interview Prep</a>
+                            <a href="#footer-socials">Contact Me</a>
+
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a target="_blank" href="https://www.overleaf.com/read/kybgvcttkzvf#0aff26">
+                            <button class="btn btn-secondary" href="www.google.com">Download CV</button>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <section id="learning" class="learning">
+                <div id="learning-section">
+                    <h2>Knowledge Trails... <i class="fa-solid fa-hourglass-half"></i></h2>
+                    <div class="skills-container">
+                        <div class="skill">
+                            <a href="https://1drv.ms/o/c/00b3990cd927d39c/EpzTJ9kMmbMggADKAgAAAAABnXsYzSWZhCXZylzcRcNL3w?e=amPNrU"
+                                target="_blank" class="button">
+                                <i class="fa-solid fa-book"></i>
+                                <p><strong>OneNote</strong> - Notes</p>
+                            </a>
+                        </div>
+                        <div class="skill">
+                            <a href="https://www.protectedtext.com/pythonquestions" target="_blank" class="button">
+                                <i class="fa-solid fa-note-sticky"></i>
+                                <p>Temporary <strong>Notes</strong></p>
+                            </a>
+                        </div>
+                        <div class="skill">
+                            <a href="https://docs.python.org/3/tutorial/index.html" target="_blank" class="button">
+                                <i class="fa-brands fa-python"></i>
+                                <p>Python <strong>Docs</strong></p>
+                            </a>
+                        </div>
+                        <div class="skill">
+                            <a href="https://leetcode.com/problemset/?difficulty=EASY&page=1" target="_blank"
+                                class="button">
+                                <i class="fa-solid fa-code"></i>
+                                <p>Leet <strong>Code</strong></p>
+                            </a>
+                        </div>
+                        <div class="skill">
+                            <a href="https://www.linkedin.com/learning/foundations-of-algorithmic-thinking-with-python"
+                                target="_blank" class="button">
+                                <i class="fa-solid fa-brain"></i>
+                                <p>Think <strong>& Code</strong></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <div class="question-section">
+            <div id="question" class="question-box"></div>
+
+            <div id="controls">
+                <button id="ask-btn"><i class="fas fa-question-circle"></i> Ask Question</button>
+                <button id="answer-btn"><i class="fas fa-info-circle"></i> Show Answer</button>
+                <!-- Write Answer Button -->
+                <button id="write-answer-btn"><i class="fas fa-pencil-alt"></i> Write Your Own Answer</button>
+                <!-- Text area for writing custom answer -->
+                <textarea id="answer-textarea" class="answer-textarea" placeholder="Write your own answer here..."
+                    style="display: none;"></textarea>
+
+                <!-- New Play Button for Python Editor -->
+                <button id="open-editor-btn"><i class="fas fa-play-circle"></i> Run Python Code</button>
+
+                <!-- New Run Code Button -->
+                <button id="run-code-btn" style="display:none;"><i class="fas fa-play-circle"></i> Run Code</button>
+
+                <!-- Python Code Textarea -->
+                <textarea id="code" rows="10" style="display: none; width: 90%;">print("Hello, World!")</textarea>
+                <!-- Python Tutor Iframe -->
+                <iframe id="tutorFrame" width="800" height="500" frameborder="0" style="display: none;"></iframe>
+            </div>
+
+
+            <div id="answer" class="answer-box"></div>
+
+            <div id="stats">
+                <button id="correct-btn"><i class="fas fa-check-circle"></i> Mark Correct</button>
+                <div id="correct-count" class="correct-count">Correct Answers: 0</div>
+                <button id="review-btn"><i class="fas fa-star"></i> Review Question</button>
+            </div>
+        </div>
+
+        <div id="reviewed-questions" class="reviewed-questions">
+            <h2><i class="fas fa-list-alt"></i> Reviewed Questions</h2>
+            <ul></ul>
+        </div>
+
+        <div id="all-questions-buttons" class="all-questions-buttons">
+            <button id="all-questions-btn"><i class="fas fa-th-list"></i> Show All Questions</button>
+            <button id="all-questions-answers-btn"><i class="fas fa-book"></i> Show All Questions with Answers</button>
+        </div>
+
+        <footer>
+            <img src="../images/roy.png" alt="">
+            <div id="footer-socials" class="footer-socials">
+                <a target="_blank" href="https://in.linkedin.com/in/priyabrata1998"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="https://github.com/prbrtr"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="https://twitter.com/priyabrataray15"><i class="fa-brands fa-twitter"></i></a>
+                <a target="_blank" href="https://in.pinterest.com/pray1744/"><i class="fa-brands fa-pinterest"></i></a>
+                <a target="_blank" href="https://www.instagram.com/prbrtr/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://stackoverflow.com/users/11813328/priyabrata-ray"><i
+                        class="fa-brands fa-stack-overflow"></i></a>
+                <a target="_blank" href="https://www.sololearn.com/en/profile/4837615"><i
+                        class="fa-solid fa-fan"></i></a>
+
+            </div>
+            <div class="copyright">
+                <p>© 2024 Ray, Inc. · All Right Reserved </p>
+
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -226,7 +226,7 @@ section.work .card-wrapper .card img {
     width: 100%;
 }
 
-section.learning {
+section.award {
     text-align: center;
     color: var(--pure);
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(camera.png);
@@ -234,8 +234,8 @@ section.learning {
     padding-bottom: 18rem;
 }
 
-#learning-section {
-    padding: 2rem 0;
+section .award-img {
+    width: 500px;
 }
 
 h2{
@@ -358,85 +358,6 @@ footer .copyright {
     font-family: 'Lato', sans-serif;
 }
 
-.job-opportunities {
-    background-color: #f2f2f2;
-    padding: 50px 0;
-}
-
-.container {
-    max-width: 1152px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.job-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.job-links a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #3dcfd3;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.job-links a:hover {
-    background-color: #1e8c8e;
-}
-
-.site-main-wrapper {
-    position: relative;
-}
-.tech-articles {
-    background-color: var(--light); /* Light grey background */
-    padding: 50px 0; /* Vertical padding */
-}
-
-.articles-container {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center the items horizontally */
-    gap: 2rem; /* Space between items */
-}
-
-.article {
-    background-color: #161616; /* Primary color background for each article box */
-    padding: 20px; /* Padding inside the box */
-    border-radius: 8px; /* Rounded corners */
-    text-align: center; /* Center text inside the box */
-    width: 200px; /* Fixed width for the boxes */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.article-link {
-    text-decoration: none; /* Remove underline from links */
-    color: var(--pure); /* Text color inside the box */
-    display: flex; /* Use flexbox for layout within the box */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-}
-
-.article-link i {
-    font-size: 3rem; /* Size of the icon */
-    margin-bottom: 10px; /* Space between icon and text */
-}
-
-.article-link p {
-    font-size: 1.2rem; /* Size of the text */
-    margin: 0; /* Remove default margin */
-}
 
 .article:hover {
     background-color: #1e8c8e; /* Darker background color on hover */
@@ -453,7 +374,6 @@ footer .copyright {
 .section-heading span {
     color: var(--primary); /* Highlighted part of the heading */
 }
-
 
 .hamberger {
     position: absolute;
