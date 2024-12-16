@@ -1,51 +1,114 @@
 [
     {
-        "question": "What is a Generator?",
+        "question": "\nWhat is a Generator?",
         "answers": [
             "A generator is a function that produce a sequence of value lazily one at a time rather than storing them all in memory at once as a list. genrator uses yeild keyword to produce the value.",
             "def generator_new(n):\n    if n % 2==0:\n        yield n\nfor i in range(5):\n    gen=generator_new(i)\n    try:\n        print(next(gen))\n    except:\n        print(\"odd\")\n\nOutput: (no output)"
         ]
     },
     {
-        "question": "what is iterator?",
+        "question": "\nwhat is iterator?",
         "answers": [
             "An iterator iterates over an object when it is used in a loop or when the next() function is called on it.",
             "my_list = [1, 2, 3]\nfor item in my_list:\n    print(item)\n\nOutput: (no output)"
         ]
     },
     {
-        "question": "Deep copy vs shallow copy.",
+        "question": "\nDeep copy vs shallow copy.",
         "answers": [
             "A shallow copy duplicates the values but keeps references to the same memory addresses, so changing the shallow copy\u2019s values affects the original object. In contrast, a deep copy duplicates the values to different memory addresses, so changes to the deep copy do not affect the original object.",
             "import copy\n\n# Original list\noriginal_list = [1, 2, [3, 4]]\n\n# Shallow copy\nshallow_copied_list = copy.copy(original_list)\n# Deep copy\ndeep_copied_list = copy.deepcopy(original_list)\n\n# Modify the nested list in the shallow copy\nshallow_copied_list[2][0] = 'shallow'\n\n# Modify the nested list in the deep copy\ndeep_copied_list[2][0] = 'deep'\n\nprint(\"Original list:\", original_list)\nprint(\"Shallow copied list:\", shallow_copied_list)\nprint(\"Deep copied list:\", deep_copied_list)\n\n"
         ]
     },
     {
-        "question": "List vs Tuple?",
+        "question": "\nList vs Tuple?",
         "answers": [
             "List:\\n\u2022 Mutable: Can be modified after creation (e.g., add/remove elements).\\n\u2022 Memory: It's slower than tuple.\\n\u2022 Syntax: Square brackets [].\\n\u2022 Example: my_list = [1, 2, 3]\\n\\nTuple:\\n\u2022 Immutable: Cannot be modified after creation.\\n\u2022 Memory: It's faster than list.\\n\u2022 Syntax: Parentheses ().\\n\u2022 Example: my_tuple = (1, 2, 3)",
             ""
         ]
     },
     {
-        "question": "Memory management in python:",
+        "question": "\nMemory management in python:",
         "answers": [
             "Python Memory Management:\nPython uses two main types of memory: stack memory and heap memory.\n\nStack Memory:\nPurpose: Stack memory is used for static memory allocation. It stores local variables and function call information.\nCharacteristics: It operates in a Last-In-First-Out (LIFO) manner. When a function is called, a new stack frame is created to store its local variables and other information. Once the function returns, the stack frame is popped off, and the memory is reclaimed.\nUsage: Ideal for small, temporary data like integers and function calls.\nHeap Memory\nPurpose: Heap memory is used for dynamic memory allocation. It stores objects and data structures that need to persist beyond the scope of a single function call.\nCharacteristics: Unlike stack memory, heap memory is not organized in a specific order. It is managed by Python\u2019s memory manager and garbage collector.\nUsage: Suitable for larger collections of data, such as lists, dictionaries, and custom objects.",
             "\nReference Counting:\nMechanism: Python uses reference counting as its primary memory management technique. Each object maintains a count of how many references point to it.\nProcess: When an object\u2019s reference count drops to zero, it means the object is no longer in use, and the memory can be reclaimed.\nGarbage Collection:\nMechanism: Python\u2019s garbage collector automatically manages memory by reclaiming unused objects. It uses reference counting and cyclic garbage collection to identify and clean up unused data.\nProcess: For cyclic references, Python uses a cyclic garbage collector to detect and break these cycles.\nMemory Management Techniques\nMemory Pools:\nFunction: Python uses memory pools to manage small objects (up to 512 bytes). These pools are pre-allocated chunks of memory, divided into blocks that store objects of similar sizes.\nBenefit: This approach reduces memory fragmentation and improves allocation performance by reusing memory blocks when objects are deallocated.\nBlock Allocation:\nFunction: For larger objects (over 512 bytes), Python uses block allocation. This strategy allocates memory blocks directly from the heap.\nBenefit: It ensures efficient memory usage for large objects."
         ]
     },
     {
-        "question": "What is class method and static method?",
+        "question": "\nWhat is class method and static method?",
         "answers": [
             "A static method in a class functions like a regular function and does not modify the class or instance state, nor does it take self or cls as parameters. In contrast, a class method takes cls as an argument, which refers to the class itself, allowing it to modify class-level state that applies across all instances.",
             "class MyClass:\n    class_variable = 0\n\n    def __init__(self, instance_variable):\n        self.instance_variable = instance_variable\n\n    @classmethod\n    def class_method(cls):\n        cls.class_variable += 1\n        print(f\"Class variable is now {cls.class_variable}\")\n\n    @staticmethod\n    def static_method():\n        print(\"This is a static method. It doesn't modify class or instance state.\")\n\n# Example usage\nobj1 = MyClass(1)\nobj2 = MyClass(2)\n\n# Calling class method\nMyClass.class_method()  # Output: Class variable is now 1\nobj1.class_method()     # Output: Class variable is now 2\n\n# Calling static method\nMyClass.static_method()  # Output: This is a static method. It doesn't modify class or instance state.\nobj1.static_method()     # Output: This is a static method. It doesn't modify class or instance state.\n\nOutput: Class variable is now 1\nClass variable is now 2\nThis is a static method. It doesn't modify class or instance state.\nThis is a static method. It doesn't modify class or instance state."
         ]
     },
     {
-        "question": "What is a map function?",
+        "question": "\nWhat is a map function?",
         "answers": [
             "The map() function in Python is used to apply a given function to all items in an iterable (eg. a list) and returns an iterable map object. It takes a function in one or more iterables as arguments and applies the function to each corresponding element.",
             "numbers=[1,2,3,4]\nsquared = map(lambda x:x**2,numbers)\nresult = list(sqaured)\n\nError: name 'sqaured' is not defined"
+        ]
+    },
+    {
+        "question": "\nwhat is a Lambda function?",
+        "answers": [
+            "In python a Lambda function also known as an anonymous function is a small unnamed function defined using the Lambda keyword it is often used for short simple operations and can take multiple arguments but can only have one expression",
+            ""
+        ]
+    },
+    {
+        "question": "\nWhat is a module in python?",
+        "answers": [
+            "A module is a file containing Python code. It can define functions, classes and veriables that can be reused in other python scripts using import.",
+            ""
+        ]
+    },
+    {
+        "question": "\nWhat is a virtual enviroment in python? Why it is used?",
+        "answers": [
+            "A virtual enviroment is a isolated python environment that allows you to lanage dependencies for different project indepedently.it is used to avoid conflicts between prject dependencies.",
+            ""
+        ]
+    },
+    {
+        "question": "\nwhat is a self keyword in python ?",
+        "answers": [
+            "self is a reference to the instance of the class. It is used to access instance variables and methods within the class.",
+            ""
+        ]
+    },
+    {
+        "question": "\nExplain recursion in python?",
+        "answers": [
+            "Recursion is a technique where a function calls itself. it's usefull for solving problem that can be broken down into smaller,sub-problem.",
+            "def factorial(n):\n    if n==0 or n==1: \n        return 1\n    else: \n        return n*factorial(n-1)\nresult = factorial(5)\nprint(\"Factorial of 5:\",result)\n\nOutput: Factorial of 5: 120"
+        ]
+    },
+    {
+        "question": "\nExplain the __init__ method in python ?",
+        "answers": [
+            "The __init__method in python is a special method used for initilizating object. Its called when the object is created.",
+            ""
+        ]
+    },
+    {
+        "question": "\nWhat is super()?",
+        "answers": [
+            "super() is used to call a method from the parent class. its often used in child class's overridden method.",
+            "class Animal:\n    def speak(self):\n        print(\"Animal speak\")\nclass Dog(Animal):\n     def speak(self):\n         super().speak()\n         print(\"Dog barks\")\n\nOutput: (no output)"
+        ]
+    },
+    {
+        "question": "\nWhat is a class in python ?",
+        "answers": [
+            "A class is a blueprint for creating objects.It defines attributes and methods that the objects will have.",
+            ""
+        ]
+    },
+    {
+        "question": "\nExplain encapsulation",
+        "answers": [
+            "Encapsulation is the building of data and the methods that operate on that data within a single unit, i.e class. It restricts access to some of the objects components, promoting data hiding and abstraction .",
+            "class Example:\n    def __init__(self):\n        self.public_var = \"I am public\"\n        self._protected_var = \"I am protected\"\n        self.__private_var = \"I am private\"\n\n    def public_method(self):\n        return \"This is a public method\"\n\n    def _protected_method(self):\n        return \"This is a protected method\"\n\n    def __private_method(self):\n        return \"This is a private method\"\n\n    def access_private_method(self):\n        return self.__private_method()\n\nexample = Example()\n\nprint(example.public_var)\nprint(example.public_method())\n\nprint(example._protected_var)\nprint(example._protected_method())\n\nprint(example.access_private_method())\n\nOutput: I am public\nThis is a public method\nI am protected\nThis is a protected method\nThis is a private method"
         ]
     }
 ]
