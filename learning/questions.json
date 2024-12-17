@@ -9,22 +9,19 @@
     {
         "question": "What is a module in python?",
         "answers": [
-            "A module is a file containing Python code. It can define functions, classes and veriables that can be reused in other python scripts using import.",
-            ""
+            "A module is a file containing Python code. It can define functions, classes and veriables that can be reused in other python scripts using import."
         ]
     },
     {
         "question": "What is a virtual enviroment in python? Why it is used?",
         "answers": [
-            "A virtual enviroment is a isolated python environment that allows you to lanage dependencies for different project indepedently.it is used to avoid conflicts between prject dependencies.",
-            ""
+            "A virtual enviroment is a isolated python environment that allows you to lanage dependencies for different project indepedently.it is used to avoid conflicts between prject dependencies."
         ]
     },
     {
         "question": "List vs Tuple?",
         "answers": [
-            "List:\\n\u2022 Mutable: Can be modified after creation (e.g., add/remove elements).\\n\u2022 Memory: It's slower than tuple.\\n\u2022 Syntax: Square brackets [].\\n\u2022 Example: my_list = [1, 2, 3]\\n\\nTuple:\\n\u2022 Immutable: Cannot be modified after creation.\\n\u2022 Memory: It's faster than list.\\n\u2022 Syntax: Parentheses ().\\n\u2022 Example: my_tuple = (1, 2, 3)",
-            ""
+            "List:\\n\u2022 Mutable: Can be modified after creation (e.g., add/remove elements).\\n\u2022 Memory: It's slower than tuple.\\n\u2022 Syntax: Square brackets [].\\n\u2022 Example: my_list = [1, 2, 3]\\n\\nTuple:\\n\u2022 Immutable: Cannot be modified after creation.\\n\u2022 Memory: It's faster than list.\\n\u2022 Syntax: Parentheses ().\\n\u2022 Example: my_tuple = (1, 2, 3)"
         ]
     },
     {
@@ -72,8 +69,7 @@
     {
         "question": "what is a Lambda function?",
         "answers": [
-            "In python a Lambda function also known as an anonymous function is a small unnamed function defined using the Lambda keyword it is often used for short simple operations and can take multiple arguments but can only have one expression",
-            ""
+            "In python a Lambda function also known as an anonymous function is a small unnamed function defined using the Lambda keyword it is often used for short simple operations and can take multiple arguments but can only have one expression"
         ]
     },
     {
@@ -100,22 +96,19 @@
     {
         "question": "What is a class in python ?",
         "answers": [
-            "A class is a blueprint for creating objects.It defines attributes and methods that the objects will have.",
-            ""
+            "A class is a blueprint for creating objects.It defines attributes and methods that the objects will have."
         ]
     },
     {
         "question": "what is a self keyword in python ?",
         "answers": [
-            "self is a reference to the instance of the class. It is used to access instance variables and methods within the class.",
-            ""
+            "self is a reference to the instance of the class. It is used to access instance variables and methods within the class."
         ]
     },
     {
         "question": "Explain the __init__ method in python ?",
         "answers": [
-            "The __init__method in python is a special method used for initilizating object. Its called when the object is created.",
-            ""
+            "The __init__method in python is a special method used for initilizating object. Its called when the object is created."
         ]
     },
     {
@@ -135,50 +128,43 @@
     {
         "question": "Explain the concept of inheritance?",
         "answers": [
-            "Inheritance is a mechanism where a new class inherits properties and behaviour from an existing class.It promotes code reuse and allows the creation of hierarchy classes.",
-            ""
+            "Inheritance is a mechanism where a new class inherits properties and behaviour from an existing class.It promotes code reuse and allows the creation of hierarchy classes."
         ]
     },
     {
         "question": "Polymorphism with Inheritance:",
         "answers": [
-            "In Python, Polymorphism lets us define methods in the child class that have the same name as the methods in the parent class. In inheritance, the child class inherits the methods from the parent class. However, it is possible to modify a method in a child class that it has inherited from the parent class. This is particularly useful in cases where the method inherited from the parent class doesn\u2019t quite fit the child class. In such cases, we re-implement the method in the child class. This process of re-implementing a method in the child class is known as Method Overriding.",
-            ""
+            "In Python, Polymorphism lets us define methods in the child class that have the same name as the methods in the parent class. In inheritance, the child class inherits the methods from the parent class. However, it is possible to modify a method in a child class that it has inherited from the parent class. This is particularly useful in cases where the method inherited from the parent class doesn\u2019t quite fit the child class. In such cases, we re-implement the method in the child class. This process of re-implementing a method in the child class is known as Method Overriding."
         ]
     },
     {
         "question": "What is polymorphism?",
         "answers": [
-            "Polymorphism allows objects to be treated as instances of their parent class rather than actual class.It allows a single interface to represent different types of objects",
-            ""
+            "Polymorphism allows objects to be treated as instances of their parent class rather than actual class.It allows a single interface to represent different types of objects"
         ]
     },
     {
         "question": "How can you achieve multiple inheritance in python ?",
         "answers": [
-            "Multiple inheretance is acheved when a class inherits from more than one base clas. Its done by specifying multiple class name in class defination",
-            ""
+            "Multiple inheretance is acheved when a class inherits from more than one base clas. Its done by specifying multiple class name in class defination"
         ]
     },
     {
         "question": "Explain method overridding and overloading in python.",
         "answers": [
-            "Method overriding occurs when a subclass provides a method which been already implemented by super class. Method over loading is having the same method names but passing different parameters (python does not suppports method overloading .",
-            ""
+            "Method overriding occurs when a subclass provides a method which been already implemented by super class. Method over loading is having the same method names but passing different parameters (python does not suppports method overloading ."
         ]
     },
     {
         "question": "what is abstract class in python?",
         "answers": [
-            "An abstract class is a class that cannot be instantiated and typically contains abstracts methods, which are method without implementation.",
-            ""
+            "An abstract class is a class that cannot be instantiated and typically contains abstracts methods, which are method without implementation."
         ]
     },
     {
         "question": "What is a meta class?",
         "answers": [
-            "A metaclass is a class that creates classes. Classes themselves are instances of metaclasses.A metaclass in Python is a class of a class that defines how a class behaves. In other words, a metaclass is a blueprint for classes, just as a class is a blueprint for objects. Metaclasses allow you to control the creation and behavior of classes.",
-            ""
+            "A metaclass is a class that creates classes. Classes themselves are instances of metaclasses.A metaclass in Python is a class of a class that defines how a class behaves. In other words, a metaclass is a blueprint for classes, just as a class is a blueprint for objects. Metaclasses allow you to control the creation and behavior of classes."
         ]
     },
     {
@@ -202,6 +188,69 @@
             "def fibonacci(n):\n    a, b = 0, 1\n    sequence = []\n    for _ in range(n):\n        sequence.append(a)\n        a, b = b, a + b\n    return sequence\n\nprint(fibonacci(10))\n\nOutput: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
         ]
     },
+    {
+        "question": "Palindrome Check:",
+        "answers": [
+            "Code :",
+            "def is_palindrome(s):\n    return s == s[::-1]\n\nprint(is_palindrome(\"racecar\"))\nprint(is_palindrome(\"hello\"))\n\nOutput:\nTrue\nFalse"
+        ]
+    },
+    {
+        "question": "Prime Number Check:",
+        "answers": [
+            "Code :",
+            "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprint(is_prime(7))\n\nOutput:\nTrue"
+        ]
+    },
+    {
+        "question": "Sort Array Without Inbuilt Functions:",
+        "answers": [
+            "Code :",
+            "def sort_array(arr):\n    for i in range(len(arr)):\n        for j in range(i + 1, len(arr)):\n            if arr[i] > arr[j])\n                arr[i], arr[j] = arr[j], arr[i]\n    return arr\n\narr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]\nsorted_arr = sort_array(arr)\nprint(sorted_arr)\n\nOutput:\n[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]"
+        ]
+    },
+    {
+        "question": "Remove Vowels from a String:",
+        "answers": [
+            "Code :",
+            "def remove_vowels(string):\n    vowels = \"aeiouAEIOU\"\n    return ''.join([char for char in string if char not in vowels])\n\nstring = \"Remove Vowels from a String\"\nresult = remove_vowels(string)\nprint(result)\n\nOutput:\nRmv Vwls frm  Strng"
+        ]
+    },
+    {
+        "question": "Return Sum of Even Numbers:",
+        "answers": [
+            "Code :",
+            "def sum_of_even_numbers(numbers):\n    return sum(num for num in numbers if num % 2 == 0)\n\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nsum_even = sum_of_even_numbers(numbers)\nprint(sum_even)\n\nOutput:\n30"
+        ]
+    },
+    {
+        "question": "Print the Pattern:",
+        "answers": [
+            "Code :",
+            "def print_pattern():\n    pattern = [\"1\", \"12\", \"123\", \"321\", \"4321\", \"12345\"]\n    for p in pattern:\n        print(p)\n\nprint_pattern()\n\nOutput:\n1\n12\n123\n321\n4321\n12345"
+        ]
+    },
+    {
+        "question": "Count Consecutive 0s and 1s:",
+        "answers": [
+            "Code :",
+            "def count_consecutive_elements(lst):\n    result = []\n    count = 1\n    for i in range(1, len(lst)):\n        if lst[i] == lst[i-1]:\n            count += 1\n        else:\n            result.append((lst[i-1], count))\n            count = 1\n    result.append((lst[-1], count))\n    return result\n\nlst = [0, 1, 1, 0, 1, 0, 0, 1, 0, 0]\nprint(count_consecutive_elements(lst))\n\nOutput:\n[(0, 1), (1, 2), (0, 1), (1, 1), (0, 2), (1, 1), (0, 2)]"
+        ]
+    },
+    {
+        "question": "Odd or Even Without Using Modulus:",
+        "answers": [
+            "Code :",
+            "def is_even(n):\n    return (n & 1) == 0\n\nresults = {i: \"Even\" if is_even(i) else \"Odd\" for i in range(1, 11)}\nprint(results)\n\nOutput:\n{1: 'Odd', 2: 'Even', 3: 'Odd', 4: 'Even', 5: 'Odd', 6: 'Even', 7: 'Odd', 8: 'Even', 9: 'Odd', 10: 'Even'}"
+        ]
+    },
+    {
+        "question": "Print Numbers from 1 to 10 Without Loop:",
+        "answers": [
+            "Code :",
+            "def print_numbers(n):\n    if n > 0:\n        print_numbers(n - 1)\n        print(n)\n\nprint_numbers(10)\n\nOutput:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+        ]
+    },    
     {
         "question": "Find Largest Number in Linked List?",
         "answers": [
