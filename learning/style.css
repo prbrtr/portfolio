@@ -18,7 +18,7 @@ section.learning {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
     background-color: var(--pure);
