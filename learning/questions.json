@@ -1,5 +1,11 @@
 [
     {
+        "question": "Python Questions:",
+        "answers": [
+            "***********************************************"
+        ]
+    },
+    {
         "question": "Memory management in python:",
         "answers": [
             "Python Memory Management:\nPython uses two main types of memory: stack memory and heap memory.\n\nStack Memory:\nPurpose: Stack memory is used for static memory allocation. It stores local variables and function call information.\nCharacteristics: It operates in a Last-In-First-Out (LIFO) manner. When a function is called, a new stack frame is created to store its local variables and other information. Once the function returns, the stack frame is popped off, and the memory is reclaimed.\nUsage: Ideal for small, temporary data like integers and function calls.\nHeap Memory\nPurpose: Heap memory is used for dynamic memory allocation. It stores objects and data structures that need to persist beyond the scope of a single function call.\nCharacteristics: Unlike stack memory, heap memory is not organized in a specific order. It is managed by Python\u2019s memory manager and garbage collector.\nUsage: Suitable for larger collections of data, such as lists, dictionaries, and custom objects.",
@@ -36,6 +42,13 @@
         "answers": [
             "Recursion is a technique where a function calls itself. it's usefull for solving problem that can be broken down into smaller,sub-problem.",
             "def factorial(n):\n    if n==0 or n==1: \n        return 1\n    else: \n        return n*factorial(n-1)\nresult = factorial(5)\nprint(\"Factorial of 5:\",result)\n\nOutput: Factorial of 5: 120"
+        ]
+    },
+    {
+        "question": "What are *args and *kwargs?",
+        "answers": [
+            "In Python, we work with two main types of arguments: positional and keyword. When we want to pass multiple positional arguments, we use *args, which collects these arguments into a tuple.When we want to pass multiple keyword arguments, we use **kwargs, which collects these arguments into a dictionary.",
+            "def my_function(*args, **kwargs):\n    print(\"Positional arguments (args):\")\n    for arg in args:\n        print(arg)\n    \n    print(\"\\nKeyword arguments (kwargs):\")\n    for key, value in kwargs.items():\n        print(f\"{key}: {value}\")\n\nmy_list = [1, 2, 3]\nmy_dict = {\"name\": \"Alice\", \"age\": 30}\n\nmy_function(*my_list, **my_dict)\n\nOutput: Positional arguments (args):\n1\n2\n3\n\nKeyword arguments (kwargs):\nname: Alice\nage: 30"
         ]
     },
     {
@@ -250,7 +263,7 @@
             "Code :",
             "def print_numbers(n):\n    if n > 0:\n        print_numbers(n - 1)\n        print(n)\n\nprint_numbers(10)\n\nOutput:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
         ]
-    },    
+    },
     {
         "question": "Find Largest Number in Linked List?",
         "answers": [
@@ -273,10 +286,67 @@
         ]
     },
     {
-        "question": "find repeating words in a text using Python?",
+        "question": "Find repeating words in a text using Python?",
         "answers": [
             "Code:",
             "text = \"This is the txt txt the is txt\".split(\" \")\ndicti={}\nfor i in text:\n    if i in dicti:\n        dicti[i]+=1\n    else:\n        dicti[i]=1 \nprint(dicti)\n\nOutput: {'This': 1, 'is': 2, 'the': 2, 'txt': 3}"
+        ]
+    },
+    {
+        "question": "How to use subprocess?",
+        "answers": [
+            "Subprocess is a librery which run commands on same system.",
+            "import subprocess\n\ndef run_command():\n    # Run a simple command and capture output\n    result = subprocess.run(['ls', '-l'], capture_output=True, text=True)\n    print(\"Output of 'ls -l':\")\n    print(result.stdout)\n\n    # Run a command with error handling\n    try:\n        result = subprocess.run(['ls', '-l', '/nonexistent'], check=True, capture_output=True, text=True)\n    except subprocess.CalledProcessError as e:\n        print(\"Error running 'ls -l /nonexistent':\")\n        print(e)\n\n    # Start a process and get output and error\n    process = subprocess.Popen(['ls', '-l'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)\n    stdout, stderr = process.communicate()\n    print(\"Output from Popen:\")\n    print(stdout)\n    print(\"Error from Popen:\")\n    print(stderr)\n\n    # Redirect output to a file\n    with open('output.txt', 'w') as f:\n        subprocess.run(['ls', '-l'], stdout=f)\n    print(\"Output redirected to 'output.txt'\")\n\nif __name__ == \"__main__\":\n    run_command()\n\nOutput: (no output)"
+        ]
+    },
+    {
+        "question": "How to use paramiko ?",
+        "answers": [
+            "Paramiko is used to run commands in another system.",
+            "import paramiko\n\ndef run_paramiko():\n    # Create an SSH client\n    client = paramiko.SSHClient()\n    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n\n    # Connect to the server\n    try:\n        client.connect('your_server_ip', username='your_username', password='your_password')\n        print(\"Connected to the server\")\n\n        # Execute a command\n        stdin, stdout, stderr = client.exec_command('ls -l')\n        print(\"Output of 'ls -l':\")\n        print(stdout.read().decode())\n\n        # Handle errors\n        stdin, stdout, stderr = client.exec_command('ls -l /nonexistent')\n        error = stderr.read().decode()\n        if error:\n            print(\"Error running 'ls -l /nonexistent':\")\n            print(error)\n\n        # Transfer files using SFTP\n        sftp = client.open_sftp()\n        sftp.put('local_file.txt', 'remote_file.txt')\n        sftp.get('remote_file.txt', 'downloaded_file.txt')\n        sftp.close()\n        print(\"File transfer completed\")\n\n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n    finally:\n        client.close()\n        print(\"Connection closed\")\n\nif __name__ == \"__main__\":\n    run_paramiko()\n\nError: No module named 'paramiko'"
+        ]
+    },
+    {
+        "question": "Write a basic unittest with selenium :",
+        "answers": [
+            "Here is the basic test to open google.com",
+            "import unittest\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\nclass GoogleSearchTest(unittest.TestCase):\n\n    def setUp(self):\n        # Set up the WebDriver (e.g., Chrome)\n        self.driver = webdriver.Chrome()\n\n    def test_google_search(self):\n        driver = self.driver\n        driver.get(\"https://www.google.com\")\n        \n        # Find the search box using its name attribute value\n        search_box = driver.find_element(By.NAME, \"q\")\n        \n        # Enter search text and submit\n        search_box.send_keys(\"Selenium testing\")\n        search_box.send_keys(Keys.RETURN)\n        \n        # Explicit wait for the results to be displayed\n        WebDriverWait(driver, 10).until(\n            EC.presence_of_element_located((By.CSS_SELECTOR, \"div.g\"))\n        )\n        \n        # Check if results are displayed\n        self.assertIn(\"Selenium testing\", driver.title)\n        results = driver.find_elements(By.CSS_SELECTOR, \"div.g\")\n        self.assertGreater(len(results), 0, \"No results found.\")\n\n    def tearDown(self):\n        # Close the browser window\n        self.driver.quit()\n\nif __name__ == \"__main__\":\n    unittest.main()\n\nError: No module named 'selenium'"
+        ]
+    },
+    {
+        "question": "Implicit Wait vs Explicit Wait?",
+        "answers": [
+            "Implicit Wait: \n\u2022 WebDriver waits for a specified time for an element before throwing an exception. \n\u2022 Applies to all elements globally in the script. \n\u2022 Example: driver.implicitly_wait(10) Explicit Wait: \n\u2022 WebDriver waits for a specific condition (e.g., element being clickable). \n\u2022 Targeted to specific elements. \n\u2022 Example: element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'submit')))"
+        ]
+    },
+    {
+        "question": "XPath vs CSS Selector?",
+        "answers": [
+            "XPath: \n\u2022 Can navigate through elements in an XML structure. \n\u2022 Example: element = driver.find_element_by_xpath(\"//tag[contains(text(), 'partial text')]\") CSS Selector: \n\u2022 Generally faster and preferred for locating elements based on style attributes. \n\u2022 Example: element = driver.find_element_by_css_selector(\"div#content\")"
+        ]
+    },
+    {
+        "question": "Page Object Model (POM)?",
+        "answers": [
+            "A design pattern in Selenium that creates an object repository for storing all web elements. It improves code maintenance and reduces code duplication by representing UI elements as objects."
+        ]
+    },
+    {
+        "question": "Handling Iframes in Selenium?",
+        "answers": [
+            "from selenium import webdriver # Set up the WebDriver \ndriver = webdriver.Chrome() \ndriver.get('URL_OF_YOUR_PAGE') # Switch to the iframe driver.switch_to.frame('iframe_id_or_name') # Perform actions inside the iframe element = driver.find_element_by_id('element_id') \nelement.click() # Switch back to the main content driver.switch_to.default_content() # Close the WebDriver driver.quit()\n\nError: No module named 'selenium'"
+        ]
+    },
+    {
+        "question": "How we can run javascript in selenium?",
+        "answers": [
+            "from selenium import webdriver\n\n# Set up the WebDriver (e.g., Chrome)\ndriver = webdriver.Chrome()\n\n# Open a webpage\ndriver.get(\"https://www.example.com\")\n\n# Execute a simple JavaScript command to get the page title\ntitle = driver.execute_script(\"return document.title;\")\nprint(\"Page title is:\", title)\n\n# Close the browser\ndriver.quit()\n\nError: No module named 'selenium'"
+        ]
+    },
+    {
+        "question": "Linux Questions:",
+        "answers": [
+            "***********************************************"
         ]
     }
 ]
