@@ -99,11 +99,10 @@ allQuestionsBtn.addEventListener('click', () => {
 // Show all questions with answers when "Show All Questions with Answers" is clicked
 allQuestionsAnswersBtn.addEventListener('click', () => {
     if (questions.length > 0) {
-        const allQuestionsAnswersHtml = questions.map(q => {
-            const answersHtml = q.answers.map(answer => `<pre class="wrapped-text">${escapeHtml(answer)}</pre>`).join('<hr>');
-            return `<li><strong>${q.question}</strong><br>${answersHtml}</li>`;
-        }).join('<hr>');  // Join questions with a separator (optional)
-
+    const allQuestionsAnswersHtml = questions.map(q => {
+        const answersHtml = q.answers.map(answer => `<pre class="wrapped-text" style="margin-top: 10px;">${escapeHtml(answer)}</pre>`).join('<hr>');
+        return `<li style="margin-bottom: 20px;"><strong>${q.question}</strong><br>${answersHtml}</li>`;
+    }).join('<hr style="margin-bottom: 20px;">');
         questionDiv.innerHTML = `<strong>All Questions with Answers:</strong><ul>${allQuestionsAnswersHtml}</ul>`;
         answerDiv.innerHTML = ''; // Clear previous answers
     } else {
