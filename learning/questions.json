@@ -268,7 +268,7 @@
         "question": "Find Largest Number in Linked List?",
         "answers": [
             "Code:",
-            "def __init__(self, data):\n        self.data = data\n        self.next = None\n\ndef find_largest(head):\n    largest = head.data\n    while head:\n        if head.data > largest:\n            largest = head.data\n        head = head.next\n    return largest\n\n# Linked list: 1 -> 5 -> 3 -> 9 -> 2\nhead = Node(1)\nhead.next = Node(5)\nhead.next.next = Node(3)\nhead.next.next.next = Node(9)\nhead.next.next.next.next = Node(2)\n\nprint(find_largest(head))\n\nError: name 'Node' is not defined"
+            "def __init__(self, data):\n        self.data = data\n        self.next = None\n\ndef find_largest(head):\n    largest = head.data\n    while head:\n        if head.data > largest:\n            largest = head.data\n        head = head.next\n    return largest\n\n# Linked list: 1 -> 5 -> 3 -> 9 -> 2\nhead = Node(1)\nhead.next = Node(5)\nhead.next.next = Node(3)\nhead.next.next.next = Node(9)\nhead.next.next.next.next = Node(2)\n\nprint(find_largest(head))\n\n"
         ]
     },
     {
@@ -310,7 +310,7 @@
         "question": "Write a basic unittest with selenium :",
         "answers": [
             "Here is the basic test to open google.com",
-            "import unittest\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\nclass GoogleSearchTest(unittest.TestCase):\n\n    def setUp(self):\n        # Set up the WebDriver (e.g., Chrome)\n        self.driver = webdriver.Chrome()\n\n    def test_google_search(self):\n        driver = self.driver\n        driver.get(\"https://www.google.com\")\n        \n        # Find the search box using its name attribute value\n        search_box = driver.find_element(By.NAME, \"q\")\n        \n        # Enter search text and submit\n        search_box.send_keys(\"Selenium testing\")\n        search_box.send_keys(Keys.RETURN)\n        \n        # Explicit wait for the results to be displayed\n        WebDriverWait(driver, 10).until(\n            EC.presence_of_element_located((By.CSS_SELECTOR, \"div.g\"))\n        )\n        \n        # Check if results are displayed\n        self.assertIn(\"Selenium testing\", driver.title)\n        results = driver.find_elements(By.CSS_SELECTOR, \"div.g\")\n        self.assertGreater(len(results), 0, \"No results found.\")\n\n    def tearDown(self):\n        # Close the browser window\n        self.driver.quit()\n\nif __name__ == \"__main__\":\n    unittest.main()\n\nError: No module named 'selenium'"
+            "import unittest\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\nclass GoogleSearchTest(unittest.TestCase):\n\n    def setUp(self):\n        # Set up the WebDriver (e.g., Chrome)\n        self.driver = webdriver.Chrome()\n\n    def test_google_search(self):\n        driver = self.driver\n        driver.get(\"https://www.google.com\")\n        \n        # Find the search box using its name attribute value\n        search_box = driver.find_element(By.NAME, \"q\")\n        \n        # Enter search text and submit\n        search_box.send_keys(\"Selenium testing\")\n        search_box.send_keys(Keys.RETURN)\n        \n        # Explicit wait for the results to be displayed\n        WebDriverWait(driver, 10).until(\n            EC.presence_of_element_located((By.CSS_SELECTOR, \"div.g\"))\n        )\n        \n        # Check if results are displayed\n        self.assertIn(\"Selenium testing\", driver.title)\n        results = driver.find_elements(By.CSS_SELECTOR, \"div.g\")\n        self.assertGreater(len(results), 0, \"No results found.\")\n\n    def tearDown(self):\n        # Close the browser window\n        self.driver.quit()\n\nif __name__ == \"__main__\":\n    unittest.main()\n\n"
         ]
     },
     {
@@ -334,13 +334,13 @@
     {
         "question": "Handling Iframes in Selenium?",
         "answers": [
-            "from selenium import webdriver # Set up the WebDriver \ndriver = webdriver.Chrome() \ndriver.get('URL_OF_YOUR_PAGE') # Switch to the iframe driver.switch_to.frame('iframe_id_or_name') # Perform actions inside the iframe element = driver.find_element_by_id('element_id') \nelement.click() # Switch back to the main content driver.switch_to.default_content() # Close the WebDriver driver.quit()\n\nError: No module named 'selenium'"
+            "from selenium import webdriver # Set up the WebDriver \ndriver = webdriver.Chrome() \ndriver.get('URL_OF_YOUR_PAGE') # Switch to the iframe driver.switch_to.frame('iframe_id_or_name') # Perform actions inside the iframe element = driver.find_element_by_id('element_id') \nelement.click() # Switch back to the main content driver.switch_to.default_content() # Close the WebDriver driver.quit()\n\n"
         ]
     },
     {
         "question": "How we can run javascript in selenium?",
         "answers": [
-            "from selenium import webdriver\n\n# Set up the WebDriver (e.g., Chrome)\ndriver = webdriver.Chrome()\n\n# Open a webpage\ndriver.get(\"https://www.example.com\")\n\n# Execute a simple JavaScript command to get the page title\ntitle = driver.execute_script(\"return document.title;\")\nprint(\"Page title is:\", title)\n\n# Close the browser\ndriver.quit()\n\nError: No module named 'selenium'"
+            "from selenium import webdriver\n\n# Set up the WebDriver (e.g., Chrome)\ndriver = webdriver.Chrome()\n\n# Open a webpage\ndriver.get(\"https://www.example.com\")\n\n# Execute a simple JavaScript command to get the page title\ntitle = driver.execute_script(\"return document.title;\")\nprint(\"Page title is:\", title)\n\n# Close the browser\ndriver.quit()\n\n"
         ]
     },
     {
@@ -348,5 +348,250 @@
         "answers": [
             "***********************************************"
         ]
+    },
+    {
+        "question": "What is the difference between a hard link and a soft link?",
+        "answers": [
+            "A hard link is a direct reference to the physical data on a disk, meaning multiple filenames can point to the same data. Deleting one hard link does not delete the data as long as another hard link exists. A soft link (or symbolic link) is a pointer to another file or directory. Deleting the original file breaks the soft link.",
+            "To create a hard link: `ln original_file hard_link_name`\nTo create a soft link: `ln -s target_file link_name`"
+        ]
+    },
+    {
+        "question": "How do users create a symbolic link in Linux?",
+        "answers": [
+            "Users can create a symbolic link in Linux using the `ln` command with the `-s` option. This creates a soft link that points to another file or directory.",
+            "Command: `ln -s target_file link_name`"
+        ]
+    },
+    {
+        "question": "What is the difference between a process and a thread?",
+        "answers": [
+            "A process is an independent program in execution with its own memory space, while a thread is a smaller unit of a process that shares the same memory space with other threads in the same process. Processes are isolated, whereas threads within the same process can communicate directly.",
+            "Processes require more resources and time for context switching compared to threads, which are lighter and faster."
+        ]
+    },
+    {
+        "question": "What is RAID in Linux? What are the basic RAID types?",
+        "answers": [
+            "RAID (Redundant Array of Independent Disks) is a technology that combines multiple disk drives into a single unit to improve performance and provide data redundancy. Basic RAID types include RAID 0 (striping), RAID 1 (mirroring), RAID 5 (striping with parity), and RAID 6 (striping with double parity).",
+            "RAID 0: No redundancy, improved performance.\nRAID 1: Mirroring, data redundancy.\nRAID 5: Striping with parity, balanced performance and redundancy.\nRAID 6: Striping with double parity, higher redundancy."
+        ]
+    },
+    {
+        "question": "What is the /proc file system?",
+        "answers": [
+            "The /proc file system is a virtual file system in Linux that provides a mechanism to access process and system information. It contains runtime system information (e.g., system memory, devices mounted, hardware configuration) and allows users to interact with the kernel.",
+            "It is often referred to as a process information pseudo-file system and does not contain 'real' files but runtime system information."
+        ]
+    },
+    {
+        "question": "What is your idea about the kernel? What is it?",
+        "answers": [
+            "The kernel is the core component of an operating system, managing system resources, hardware, and communication between software and hardware. It handles memory management, process management, device drivers, and system calls.",
+            "In Linux, the kernel is responsible for managing the system's operations and ensuring efficient resource usage."
+        ]
+    },
+    {
+        "question": "How to use the sed command to replace words?",
+        "answers": [
+            "The `sed` command in Linux is used to find and replace text in files. It can perform basic text manipulations and supports regular expressions for complex patterns.",
+            "Command: `sed -i 's/old_word/new_word/g' filename`"
+        ]
+    },
+    {
+        "question": "Testing Questions:",
+        "answers": [
+            "***********************************************"
+        ]
+    },
+    {
+        "question": "What are the different types of software testing?",
+        "answers": [
+            "Software testing can be broadly categorized into Functional Testing and Non-Functional Testing.",
+            "Functional Testing includes Unit Testing, Integration Testing, System Testing, and Acceptance Testing.",
+            "Non-Functional Testing includes Performance Testing, Security Testing, Usability Testing, and Compatibility Testing."
+        ]
+    },
+    {
+        "question": "What are the Different Phases of the Software Testing Life Cycle?",
+        "answers": [
+            "The Software Testing Life Cycle (STLC) consists of the following phases:",
+            "1. Requirement Analysis",
+            "2. Test Planning",
+            "3. Test Case Development",
+            "4. Test Environment Setup",
+            "5. Test Execution",
+            "6. Test Cycle Closure"
+        ]
+    },
+    {
+        "question": "Explain SDLC?",
+        "answers": [
+            "The Software Development Life Cycle (SDLC) is a process used by software industry to design, develop and test high-quality software.",
+            "The SDLC phases include: Planning, Analysis, Design, Implementation, Testing, Deployment, and Maintenance."
+        ]
+    },
+    {
+        "question": "What is Agile?",
+        "answers": [
+            "Agile is a project management and software development methodology that focuses on iterative development, where requirements and solutions evolve through collaboration between self-organizing cross-functional teams.",
+            "Agile promotes flexible responses to change and continuous improvement."
+        ]
+    },
+    {
+        "question": "What is the difference between priority and severity?",
+        "answers": [
+            "Priority refers to the order in which a defect should be fixed, based on its impact on the project schedule.",
+            "Severity refers to the impact a defect has on the functionality of the application."
+        ]
+    },
+    {
+        "question": "What do you mean by Quality Assurance (QA)?",
+        "answers": [
+            "Quality Assurance (QA) is a systematic process to determine whether a product or service meets specified requirements.",
+            "QA focuses on improving the processes to deliver Quality Products to the customer."
+        ]
+    },
+    {
+        "question": "What is performance testing, load testing, and stress testing?",
+        "answers": [
+            "Performance Testing is a type of testing to ensure software applications will perform well under their expected workload.",
+            "Load Testing is a type of performance testing to check the system's behavior under normal and peak conditions.",
+            "Stress Testing is a type of performance testing to evaluate a system's robustness and error handling under extreme conditions."
+        ]
+    },
+    {
+        "question": "How do you plan the test cases?",
+        "answers": [
+            "Planning test cases involves the following steps:",
+            "1. Analyze the requirements.",
+            "2. Define test objectives.",
+            "3. Design test cases.",
+            "4. Review and baseline test cases.",
+            "5. Execute test cases and log defects.",
+            "6. Retest and close defects."
+        ]
+    },
+    {
+        "question": "What is the difference between Black Box Testing and White Box Testing?",
+        "answers": [
+            "Black Box Testing is a testing approach where the tester does not have knowledge of the internal structure or code of the application. It focuses on testing the functionality of the software based on the requirements.",
+            "White Box Testing, also known as Clear Box Testing, involves testing the internal structures or workings of an application. The tester has knowledge of the code and can test the paths, branches, and conditions within the code."
+        ]
+    },
+    {
+        "question": "What is the difference between Sanity Testing and Regression Testing?",
+        "answers": [
+            "Sanity Testing is a subset of regression testing. It is performed to verify that a specific section of the application is still working after a minor change or bug fix. It is a quick, narrow, and focused test.",
+            "Regression Testing is a comprehensive testing approach that ensures that recent code changes have not adversely affected existing functionalities. It involves re-running previously completed tests to check if the existing functionalities work as expected."
+        ]
+    },
+    {
+        "question": "What is the Difference Between Functional and Non-functional Testing?",
+        "answers": [
+            "Functional Testing verifies that the software performs its intended functions correctly, focusing on features and interactions. It is based on customer requirements and includes tests like Unit Testing, Integration Testing, System Testing, and Acceptance Testing.",
+            "Non-functional Testing assesses overall performance, usability, and quality attributes like speed, security, and reliability. It is based on customer expectations and includes tests like Performance Testing, Security Testing, Usability Testing, and Compatibility Testing."
+        ]
+    },
+    {
+        "question": "What do you fill when you create a Jira issue, and why do we give that?",
+        "answers": [
+            "When creating a Jira issue, you typically fill in the following fields:",
+            "1. **Summary**: A brief title of the issue.",
+            "2. **Description**: Detailed information about the issue, including steps to reproduce, expected vs. actual results.",
+            "3. **Issue Type**: Specifies whether it's a bug, task, story, etc.",
+            "4. **Priority**: Indicates the urgency of the issue.",
+            "5. **Assignee**: The person responsible for resolving the issue.",
+            "6. **Reporter**: The person who reported the issue.",
+            "7. **Attachments**: Screenshots or files related to the issue.",
+            "These fields help in clearly communicating the issue to the development team, ensuring it is tracked, prioritized, and resolved efficiently."
+        ]
+    },
+    {
+        "question": "What's the difference between negative and positive testing?",
+        "answers": [
+            "Positive Testing checks if the application works as expected with valid input data. It aims to verify that the software does what it is supposed to do.",
+            "Negative Testing checks how the application handles invalid input or unexpected user behavior. It aims to ensure the software can gracefully handle errors and edge cases."
+        ]
+    },
+    {
+        "question": "What elements do you include in a bug report?",
+        "answers": [
+            "A well-structured bug report typically includes the following elements:",
+            "1. **Title**: A concise summary of the bug.",
+            "2. **Description**: Detailed information about the bug, including steps to reproduce, expected vs. actual results.",
+            "3. **Steps to Reproduce**: A step-by-step guide to replicate the issue.",
+            "4. **Expected Result**: What should happen if the software works correctly.",
+            "5. **Actual Result**: What actually happens when the bug occurs.",
+            "6. **Environment Details**: Information about the software and hardware environment where the bug was found (e.g., OS, browser version).",
+            "7. **Severity and Priority**: The impact of the bug and its urgency.",
+            "8. **Attachments**: Screenshots, logs, or any other relevant files."
+        ]
+    },
+    {
+        "question": "How many test plans can you make for a simple add function passing 2 arguments?",
+        "answers": [
+            "For a simple add function that takes two arguments, you can create several test plans to cover different scenarios:",
+            "1. **Positive Tests**: Test with positive integers (e.g., add(2, 3)).",
+            "2. **Negative Tests**: Test with negative integers (e.g., add(-2, -3)).",
+            "3. **Zero Tests**: Test with zero (e.g., add(0, 5) and add(5, 0)).",
+            "4. **Mixed Sign Tests**: Test with one positive and one negative integer (e.g., add(2, -3)).",
+            "5. **Large Numbers**: Test with large integers to check for overflow issues (e.g., add(1000000, 2000000)).",
+            "6. **Boundary Tests**: Test with boundary values (e.g., add(Integer.MAX_VALUE, 1)).",
+            "7. **Non-integer Inputs**: Test with non-integer inputs if the function should handle them (e.g., add(2.5, 3.5))."
+        ]
+    },
+    {
+        "question": "What is API Testing, Models, Admin, and Types of APIs?",
+        "answers": [
+            "API Testing involves testing Application Programming Interfaces (APIs) directly and as part of integration testing to determine if they meet expectations for functionality, reliability, performance, and security.",
+            "Models in API testing refer to the data structures that APIs use to communicate. These models define the format of the data exchanged between the client and server.",
+            "Admin in the context of APIs typically refers to the administrative tasks involved in managing APIs, such as setting up API keys, monitoring usage, and managing access controls.",
+            "Types of APIs include:",
+            "1. **Open APIs**: Publicly available APIs that can be used by any developer.",
+            "2. **Internal APIs**: Private APIs used within an organization to connect systems and data.",
+            "3. **Partner APIs**: APIs shared with specific business partners to facilitate integration.",
+            "4. **Composite APIs**: APIs that combine multiple data or service APIs."
+        ]
+    },
+    {
+        "question": "General Questions:",
+        "answers": [
+            "***********************************************"
+        ]
+    },
+    {
+        "question": "Tell me about yourself?",
+        "answers": [
+            "I have over 4 years of experience working as a manual tester, automation tester, and developer in Python at YYY. My current project involves client and server platform validation for a client named XYXXXX. I handle tasks from documentation provided by the client, which are created as Jira tickets by the team lead. These tasks are prioritized based on severity and priority, and we follow a sprint-based approach with regular updates to leads and clients.",
+            "I develop high-priority test cases initially, based on client-provided documentation. The duration for developing test cases varies, and I can complete 3 to 6 test cases per day depending on their priority. We use server platform boards provided by the client, which include components and drivers related to media, power delivery, and network. I develop scripts to test these scenarios, collect logs, and update Jira tickets with the results.",
+            "After developing the code, I test it, collect logs, and push the code to GitHub for review by leads and clients. Any comments are addressed, and the code is updated accordingly. Once approved, the code is merged into the main branch and cloned to the server platform for execution by the testing team. If any issues arise, I debug and resolve them before pushing the final code to the main branch. The Jira ticket is then updated to resolved and closed by the client."
+        ]
+    },
+    {
+        "question": "How do you handle failures?",
+        "answers": [
+            "When handling failures, I follow a systematic approach:",
+            "1. **Identify the Issue**: Analyze logs and error messages to pinpoint the root cause of the failure.",
+            "2. **Reproduce the Issue**: Try to replicate the failure in a controlled environment to understand its behavior.",
+            "3. **Debug and Fix**: Use debugging tools and techniques to fix the issue. This may involve modifying the code, updating test scripts, or adjusting configurations.",
+            "4. **Test the Fix**: Run tests to ensure the fix resolves the issue without introducing new problems.",
+            "5. **Document the Solution**: Update documentation and Jira tickets with details of the issue and the solution implemented.",
+            "6. **Communicate**: Keep stakeholders informed about the issue, the steps taken to resolve it, and any potential impacts on the project timeline."
+        ]
+    },
+    {
+        "question": "What are all the challenges you faced?",
+        "answers": [
+            "Throughout my career, I have faced several challenges, including:",
+            "1. **Flaky Tests**: Dealing with tests that pass or fail intermittently. I addressed this by improving synchronization and stabilizing the test environment.",
+            "2. **Test Maintenance**: Keeping automated test scripts up-to-date with evolving application features. I used a modular approach and regular refactoring to manage this.",
+            "3. **Integration with CI/CD**: Ensuring seamless integration of automated tests with the CI/CD pipeline. I collaborated with the DevOps team to achieve this.",
+            "4. **Performance Testing**: Conducting performance tests and analyzing results required learning new tools like JMeter. I successfully identified and resolved performance bottlenecks.",
+            "5. **Communication**: Effectively communicating issues and solutions to non-technical stakeholders. I improved my communication skills to ensure clear and concise updates."
+        ]
     }
+    
+    
+
 ]
