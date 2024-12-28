@@ -1,17 +1,19 @@
 @import 'utilities.css';
 
 :root {
-    --primary: #3DCFD3;
-    --secondary: black;
-    --dark: #161616;
-    --pure: #FFFFFF;
-    --ternary: #898989;
-    --light: #F2F2F2;
+     --primary: #4CAF50; /* Accent color (green) */
+    --secondary: #E0E0E0; /* Light text color */
+    --dark: #0F0F0F; /* Background for dark theme */
+    --pure: #FFFFFF; /* Pure white text */
+    --ternary: #B3B3B3; /* Muted text color */
+    --light: #1E1E1E;
 }
 
 body {
     height: 8000;
     font-family: 'Poppins', sans-serif;
+    background:#1A1A1A;
+    color: var(--secondary);
 }
 
 html {
@@ -150,6 +152,7 @@ section.about p {
 
 .skill-category h4 {
     background-color: var(--primary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     color: var(--secondary);
     padding: 5px 5px;
     border-radius: 5px;
@@ -330,6 +333,9 @@ footer {
     background: var(--dark);
     text-align: center;
     padding-top: 1rem;
+    border-top-left-radius: 50px;
+    border-top-left-radius: 50px;
+
 }
 
 footer img {
@@ -403,6 +409,7 @@ footer .copyright {
     transition: all .5s ease-in-out;
 }
 
+
 .open {
     transform: translatex(0);
 }
@@ -415,6 +422,7 @@ footer .copyright {
     background: none;
     outline: none;
     cursor: pointer;
+    color: #E0E0E0;
 }
 
 .times i {
@@ -426,7 +434,7 @@ footer .copyright {
 }
 
 .mobile-nav ul li a {
-    color: var(--dark);
+    color: var(--pure);
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: bold;
@@ -448,6 +456,7 @@ footer .copyright {
 
     .hamberger {
         display: block;
+        color:#E0E0E0;
     }
 
     .hero .left img {

@@ -10,25 +10,28 @@ section.learning {
 
 
 :root {
-    --primary: #3DCFD3;
-    --secondary: black;
-    --dark: #161616;
-    --pure: #FFFFFF;
-    --ternary: #898989;
+    --primary: #4CAF50; /* Accent color (green) */
+    --secondary: #E0E0E0; /* Light text color */
+    --dark: #0F0F0F; /* Background for dark theme */
+    --pure: #FFFFFF; /* Pure white text */
+    --ternary: #B3B3B3; /* Muted text color */
+    --light: #1E1E1E;
 }
 
 body {
     font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
-    background-color: var(--pure);
-    color: var(--dark);
+    background-color: var(--light);
+    color: var(--pure);
     text-align: center;
+    
     /* Center text by default */
 }
 
 .question-section {
     padding: 2rem;
+
 }
 
 h1 {
@@ -52,7 +55,7 @@ h1 {
 .question-box,
 .answer-box {
     padding: 15px;
-    background-color: var(--pure);
+    background-color: var(--light);
     font-size: 18px;
     margin: 0 auto;
     /* Center the boxes within the container */
@@ -72,7 +75,7 @@ h1 {
     overflow-y: auto;
     /* Enable vertical scrolling */
     padding: 10px;
-    background-color: #eef;
+    background-color: var(--dark);
     /* Subtle background for answers */
 }
 
@@ -87,6 +90,8 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: vertical;
+    background-color: var(--light); 
+    color:aquamarine;
     /* Allows the user to resize vertically if needed */
 }
 
@@ -100,17 +105,18 @@ h1 {
 button {
     padding: 20px 15px;
     background-color: var(--primary);
-    border: none;
-    color: var(--pure);
+    border: 2rem inset --dark; 
+    color: var(--pure;
     border-radius: 5px;
     cursor: pointer;
     margin: 5px;
     flex: 1 1 48%;
     text-align: center;
+
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--primary);
 }
 
 #stats {
@@ -130,12 +136,14 @@ button:hover {
 
 .all-questions-buttons {
     margin-top: 20px;
+   
 }
 
 .all-questions-buttons button {
     background-color: var(--secondary);
     color: var(--pure);
     padding: 20px 10px;
+    
 }
 
 .all-questions-buttons button:hover {
