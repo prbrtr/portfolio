@@ -489,7 +489,11 @@ footer .copyright {
     }
 }
 
-@media (max-width:576px) {
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
     .hero {
         flex-direction: column;
     }
