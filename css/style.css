@@ -493,6 +493,7 @@ footer .copyright {
     .container {
         width: 100%;
         padding: 10px;
+        overflow:hidden;
     }
     .hero {
         flex-direction: column;
