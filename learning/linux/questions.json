@@ -1,0 +1,58 @@
+[
+   
+    {
+        "question": "Linux Questions:",
+        "answers": [
+            "***********************************************"
+        ]
+    },
+    {
+        "question": "What is the difference between a hard link and a soft link?",
+        "answers": [
+            "A hard link is a direct reference to the physical data on a disk, meaning multiple filenames can point to the same data. Deleting one hard link does not delete the data as long as another hard link exists. A soft link (or symbolic link) is a pointer to another file or directory. Deleting the original file breaks the soft link.",
+            "To create a hard link: `ln original_file hard_link_name`\nTo create a soft link: `ln -s target_file link_name`"
+        ]
+    },
+    {
+        "question": "How do users create a symbolic link in Linux?",
+        "answers": [
+            "Users can create a symbolic link in Linux using the `ln` command with the `-s` option. This creates a soft link that points to another file or directory.",
+            "Command: `ln -s target_file link_name`"
+        ]
+    },
+    {
+        "question": "What is the difference between a process and a thread?",
+        "answers": [
+            "A process is an independent program in execution with its own memory space, while a thread is a smaller unit of a process that shares the same memory space with other threads in the same process. Processes are isolated, whereas threads within the same process can communicate directly.",
+            "Processes require more resources and time for context switching compared to threads, which are lighter and faster."
+        ]
+    },
+    {
+        "question": "What is RAID in Linux? What are the basic RAID types?",
+        "answers": [
+            "RAID (Redundant Array of Independent Disks) is a technology that combines multiple disk drives into a single unit to improve performance and provide data redundancy. Basic RAID types include RAID 0 (striping), RAID 1 (mirroring), RAID 5 (striping with parity), and RAID 6 (striping with double parity).",
+            "RAID 0: No redundancy, improved performance.\nRAID 1: Mirroring, data redundancy.\nRAID 5: Striping with parity, balanced performance and redundancy.\nRAID 6: Striping with double parity, higher redundancy."
+        ]
+    },
+    {
+        "question": "What is the /proc file system?",
+        "answers": [
+            "The /proc file system is a virtual file system in Linux that provides a mechanism to access process and system information. It contains runtime system information (e.g., system memory, devices mounted, hardware configuration) and allows users to interact with the kernel.",
+            "It is often referred to as a process information pseudo-file system and does not contain 'real' files but runtime system information."
+        ]
+    },
+    {
+        "question": "What is your idea about the kernel? What is it?",
+        "answers": [
+            "The kernel is the core component of an operating system, managing system resources, hardware, and communication between software and hardware. It handles memory management, process management, device drivers, and system calls.",
+            "In Linux, the kernel is responsible for managing the system's operations and ensuring efficient resource usage."
+        ]
+    },
+    {
+        "question": "How to use the sed command to replace words?",
+        "answers": [
+            "The `sed` command in Linux is used to find and replace text in files. It can perform basic text manipulations and supports regular expressions for complex patterns.",
+            "Command: `sed -i 's/old_word/new_word/g' filename`"
+        ]
+    }
+]

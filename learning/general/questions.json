@@ -1,0 +1,36 @@
+[
+    {
+        "question": "Tell me about yourself?",
+        "answers": [
+            "I have over 4 years of experience working as a manual tester, automation tester, and developer in Python at YYY. My current project involves client and server platform validation for a client named XYXXXX. I handle tasks from documentation provided by the client, which are created as Jira tickets by the team lead. These tasks are prioritized based on severity and priority, and we follow a sprint-based approach with regular updates to leads and clients.",
+            "I develop high-priority test cases initially, based on client-provided documentation. The duration for developing test cases varies, and I can complete 3 to 6 test cases per day depending on their priority. We use server platform boards provided by the client, which include components and drivers related to media, power delivery, and network. I develop scripts to test these scenarios, collect logs, and update Jira tickets with the results.",
+            "After developing the code, I test it, collect logs, and push the code to GitHub for review by leads and clients. Any comments are addressed, and the code is updated accordingly. Once approved, the code is merged into the main branch and cloned to the server platform for execution by the testing team. If any issues arise, I debug and resolve them before pushing the final code to the main branch. The Jira ticket is then updated to resolved and closed by the client."
+        ]
+    },
+    {
+        "question": "How do you handle failures?",
+        "answers": [
+            "When handling failures, I follow a systematic approach:",
+            "1. **Identify the Issue**: Analyze logs and error messages to pinpoint the root cause of the failure.",
+            "2. **Reproduce the Issue**: Try to replicate the failure in a controlled environment to understand its behavior.",
+            "3. **Debug and Fix**: Use debugging tools and techniques to fix the issue. This may involve modifying the code, updating test scripts, or adjusting configurations.",
+            "4. **Test the Fix**: Run tests to ensure the fix resolves the issue without introducing new problems.",
+            "5. **Document the Solution**: Update documentation and Jira tickets with details of the issue and the solution implemented.",
+            "6. **Communicate**: Keep stakeholders informed about the issue, the steps taken to resolve it, and any potential impacts on the project timeline."
+        ]
+    },
+    {
+        "question": "What are all the challenges you faced?",
+        "answers": [
+            "Throughout my career, I have faced several challenges, including:",
+            "1. **Flaky Tests**: Dealing with tests that pass or fail intermittently. I addressed this by improving synchronization and stabilizing the test environment.",
+            "2. **Test Maintenance**: Keeping automated test scripts up-to-date with evolving application features. I used a modular approach and regular refactoring to manage this.",
+            "3. **Integration with CI/CD**: Ensuring seamless integration of automated tests with the CI/CD pipeline. I collaborated with the DevOps team to achieve this.",
+            "4. **Performance Testing**: Conducting performance tests and analyzing results required learning new tools like JMeter. I successfully identified and resolved performance bottlenecks.",
+            "5. **Communication**: Effectively communicating issues and solutions to non-technical stakeholders. I improved my communication skills to ensure clear and concise updates."
+        ]
+    }
+    
+    
+
+]

@@ -7,8 +7,8 @@
     <!-- javascript -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- css -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../style.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://www.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>Portfolio</title>
-    <link rel="icon" type="../image/roy" href="../images/roy.png">
+    <link rel="icon" type="../../image/roy" href="../images/roy.png">
 
 
 </head>
@@ -29,10 +29,11 @@
         <div class="mobile-nav">
             <button class="times"><i class="fa fa-close"></i></button>
             <ul>
-                <li><img src="../images/roy.png" href="../index.html" alt=""></li>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../job-opportunities/index.html">Jobs</a></li>
+                <li><img src="../../images/roy.png" href="../index.html" alt=""></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../job-opportunities/index.html">Jobs</a></li>
                 <li> <a href="#learning">Learning</a></li>
+                <li> <a href="#question">Interview Prep</a> </li>
                 <li> <a href="#footer-socials">Contact Me</a> </li>
             </ul>
         </div>
@@ -41,12 +42,13 @@
                 <nav id="main-nav" class="flex items-center">
                     <div class="left flex items-center">
                         <div class="branding ">
-                            <img src="images/roy.png" alt="">
+                            <img src="../../images/roy.png" alt="">
                         </div>
                         <div>
-                            <a href="../index.html">Home</a>
-                            <a href="../job-opportunities/index.html">Jobs</a>
+                            <a href="../../index.html">Home</a>
+                            <a href="../../job-opportunities/index.html">Jobs</a>
                             <a href="#learning">Learning</a>
+                            <a href="#question">Interview Prep</a>
                             <a href="#footer-socials">Contact Me</a>
 
                         </div>
@@ -63,31 +65,31 @@
                     <h2>Knowledge Trails... <i class="fa-solid fa-hourglass-half"></i></h2>
                     <div class="skills-container">
                         <div class="skill">
-                            <a href="general/index.html" target="_blank" class="button">
+                            <a href="../general/index.html" target="_blank" class="button">
                                 <i class="fa-solid fa-book-open"></i>
                                 <p><strong>General</strong> - Questions</p>
                             </a>
                         </div>
                         <div class="skill">
-                            <a href="testing/index.html" target="_blank" class="button">
+                            <a href="../testing/index.html" target="_blank" class="button">
                                 <i class="fa-solid fa-vial"></i>
                                 <p>Testing</p>
                             </a>
                         </div>
                         <div class="skill">
-                            <a href="python/index.html" target="_blank" class="button">
+                            <a href="../python/index.html" target="_blank" class="button">
                                 <i class="fa-brands fa-python"></i>
                                 <p>Python</p>
                             </a>
                         </div>
                         <div class="skill">
-                            <a href="linux/index.html" target="_blank" class="button">
+                            <a href="../linux/index.html" target="_blank" class="button">
                                 <i class="fa-brands fa-linux"></i>
                                 <p>Linux</p>
                             </a>
                         </div>
                         <div class="skill">
-                            <a href="system/index.html" target="_blank" class="button">
+                            <a href="../system/index.html" target="_blank" class="button">
                                 <i class="fa-solid fa-server"></i>
                                 <p>System</p>
                             </a>
@@ -102,9 +104,52 @@
                 </div>
             </section>
         </header>
-        <iframe src="https://wheeldecide.com/e.php?c1=Python&c2=Testing&c3=System&c4=Linux&c5=General&time=5" width="500" height="500" scrolling="yes" frameborder="0"></iframe>
+        <div class="question-section">
+            <div id="question" class="question-box"></div>
+
+            <div id="controls">
+                <button id="ask-btn"><i class="fas fa-question-circle"></i> Ask Question</button>
+                <button id="answer-btn"><i class="fas fa-info-circle"></i> Show Answer</button>
+                <!-- Write Answer Button -->
+                <button id="write-answer-btn"><i class="fas fa-pencil-alt"></i> Write Your Own Answer</button>
+                <!-- Text area for writing custom answer -->
+                <textarea id="answer-textarea" class="answer-textarea" placeholder="Write your own answer here..."
+                    style="display: none;"></textarea>
+
+                <!-- New Play Button for Python Editor -->
+                <button id="open-editor-btn"><i class="fas fa-play-circle"></i> Run Python Code</button>
+
+                <!-- New Run Code Button -->
+                <button id="run-code-btn" style="display:none;"><i class="fas fa-play-circle"></i> Run Code</button>
+
+                <!-- Python Code Textarea -->
+                <textarea id="code" rows="10" style="display: none; width: 90%;">print("Hello, World!")</textarea>
+                <!-- Python Tutor Iframe -->
+                <iframe id="tutorFrame" width="800" height="500" frameborder="0" style="display: none;"></iframe>
+            </div>
+
+
+            <div id="answer" class="answer-box"></div>
+
+            <div id="stats">
+                <button id="correct-btn"><i class="fas fa-check-circle"></i> Mark Correct</button>
+                <div id="correct-count" class="correct-count">Correct Answers: 0</div>
+                <button id="review-btn"><i class="fas fa-star"></i> Review Question</button>
+            </div>
+        </div>
+
+        <div id="reviewed-questions" class="reviewed-questions">
+            <h2><i class="fas fa-list-alt"></i> Reviewed Questions</h2>
+            <ul></ul>
+        </div>
+
+        <div id="all-questions-buttons" class="all-questions-buttons">
+            <button id="all-questions-btn"><i class="fas fa-th-list"></i> Show All Questions</button>
+            <button id="all-questions-answers-btn"><i class="fas fa-book"></i> Show All Questions with Answers</button>
+        </div>
+
         <footer>
-            <img src="../images/roy.png" alt="">
+            <img src="../../images/roy.png" alt="">
             <div id="footer-socials" class="footer-socials">
                 <a target="_blank" href="https://in.linkedin.com/in/priyabrata1998"><i
                         class="fa-brands fa-linkedin"></i></a>
@@ -126,8 +171,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="script.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

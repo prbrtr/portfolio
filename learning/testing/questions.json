@@ -1,0 +1,153 @@
+[
+    {
+        "question": "What are the different types of software testing?",
+        "answers": [
+            "Software testing can be broadly categorized into Functional Testing and Non-Functional Testing.",
+            "Functional Testing includes Unit Testing, Integration Testing, System Testing, and Acceptance Testing.",
+            "Non-Functional Testing includes Performance Testing, Security Testing, Usability Testing, and Compatibility Testing."
+        ]
+    },
+    {
+        "question": "What are the Different Phases of the Software Testing Life Cycle?",
+        "answers": [
+            "The Software Testing Life Cycle (STLC) consists of the following phases:",
+            "1. Requirement Analysis",
+            "2. Test Planning",
+            "3. Test Case Development",
+            "4. Test Environment Setup",
+            "5. Test Execution",
+            "6. Test Cycle Closure"
+        ]
+    },
+    {
+        "question": "Explain SDLC?",
+        "answers": [
+            "The Software Development Life Cycle (SDLC) is a process used by software industry to design, develop and test high-quality software.",
+            "The SDLC phases include: Planning, Analysis, Design, Implementation, Testing, Deployment, and Maintenance."
+        ]
+    },
+    {
+        "question": "What is Agile?",
+        "answers": [
+            "Agile is a project management and software development methodology that focuses on iterative development, where requirements and solutions evolve through collaboration between self-organizing cross-functional teams.",
+            "Agile promotes flexible responses to change and continuous improvement."
+        ]
+    },
+    {
+        "question": "What is the difference between priority and severity?",
+        "answers": [
+            "Priority refers to the order in which a defect should be fixed, based on its impact on the project schedule.",
+            "Severity refers to the impact a defect has on the functionality of the application."
+        ]
+    },
+    {
+        "question": "What do you mean by Quality Assurance (QA)?",
+        "answers": [
+            "Quality Assurance (QA) is a systematic process to determine whether a product or service meets specified requirements.",
+            "QA focuses on improving the processes to deliver Quality Products to the customer."
+        ]
+    },
+    {
+        "question": "What is performance testing, load testing, and stress testing?",
+        "answers": [
+            "Performance Testing is a type of testing to ensure software applications will perform well under their expected workload.",
+            "Load Testing is a type of performance testing to check the system's behavior under normal and peak conditions.",
+            "Stress Testing is a type of performance testing to evaluate a system's robustness and error handling under extreme conditions."
+        ]
+    },
+    {
+        "question": "How do you plan the test cases?",
+        "answers": [
+            "Planning test cases involves the following steps:",
+            "1. Analyze the requirements.",
+            "2. Define test objectives.",
+            "3. Design test cases.",
+            "4. Review and baseline test cases.",
+            "5. Execute test cases and log defects.",
+            "6. Retest and close defects."
+        ]
+    },
+    {
+        "question": "What is the difference between Black Box Testing and White Box Testing?",
+        "answers": [
+            "Black Box Testing is a testing approach where the tester does not have knowledge of the internal structure or code of the application. It focuses on testing the functionality of the software based on the requirements.",
+            "White Box Testing, also known as Clear Box Testing, involves testing the internal structures or workings of an application. The tester has knowledge of the code and can test the paths, branches, and conditions within the code."
+        ]
+    },
+    {
+        "question": "What is the difference between Sanity Testing and Regression Testing?",
+        "answers": [
+            "Sanity Testing is a subset of regression testing. It is performed to verify that a specific section of the application is still working after a minor change or bug fix. It is a quick, narrow, and focused test.",
+            "Regression Testing is a comprehensive testing approach that ensures that recent code changes have not adversely affected existing functionalities. It involves re-running previously completed tests to check if the existing functionalities work as expected."
+        ]
+    },
+    {
+        "question": "What is the Difference Between Functional and Non-functional Testing?",
+        "answers": [
+            "Functional Testing verifies that the software performs its intended functions correctly, focusing on features and interactions. It is based on customer requirements and includes tests like Unit Testing, Integration Testing, System Testing, and Acceptance Testing.",
+            "Non-functional Testing assesses overall performance, usability, and quality attributes like speed, security, and reliability. It is based on customer expectations and includes tests like Performance Testing, Security Testing, Usability Testing, and Compatibility Testing."
+        ]
+    },
+    {
+        "question": "What do you fill when you create a Jira issue, and why do we give that?",
+        "answers": [
+            "When creating a Jira issue, you typically fill in the following fields:",
+            "1. **Summary**: A brief title of the issue.",
+            "2. **Description**: Detailed information about the issue, including steps to reproduce, expected vs. actual results.",
+            "3. **Issue Type**: Specifies whether it's a bug, task, story, etc.",
+            "4. **Priority**: Indicates the urgency of the issue.",
+            "5. **Assignee**: The person responsible for resolving the issue.",
+            "6. **Reporter**: The person who reported the issue.",
+            "7. **Attachments**: Screenshots or files related to the issue.",
+            "These fields help in clearly communicating the issue to the development team, ensuring it is tracked, prioritized, and resolved efficiently."
+        ]
+    },
+    {
+        "question": "What's the difference between negative and positive testing?",
+        "answers": [
+            "Positive Testing checks if the application works as expected with valid input data. It aims to verify that the software does what it is supposed to do.",
+            "Negative Testing checks how the application handles invalid input or unexpected user behavior. It aims to ensure the software can gracefully handle errors and edge cases."
+        ]
+    },
+    {
+        "question": "What elements do you include in a bug report?",
+        "answers": [
+            "A well-structured bug report typically includes the following elements:",
+            "1. **Title**: A concise summary of the bug.",
+            "2. **Description**: Detailed information about the bug, including steps to reproduce, expected vs. actual results.",
+            "3. **Steps to Reproduce**: A step-by-step guide to replicate the issue.",
+            "4. **Expected Result**: What should happen if the software works correctly.",
+            "5. **Actual Result**: What actually happens when the bug occurs.",
+            "6. **Environment Details**: Information about the software and hardware environment where the bug was found (e.g., OS, browser version).",
+            "7. **Severity and Priority**: The impact of the bug and its urgency.",
+            "8. **Attachments**: Screenshots, logs, or any other relevant files."
+        ]
+    },
+    {
+        "question": "How many test plans can you make for a simple add function passing 2 arguments?",
+        "answers": [
+            "For a simple add function that takes two arguments, you can create several test plans to cover different scenarios:",
+            "1. **Positive Tests**: Test with positive integers (e.g., add(2, 3)).",
+            "2. **Negative Tests**: Test with negative integers (e.g., add(-2, -3)).",
+            "3. **Zero Tests**: Test with zero (e.g., add(0, 5) and add(5, 0)).",
+            "4. **Mixed Sign Tests**: Test with one positive and one negative integer (e.g., add(2, -3)).",
+            "5. **Large Numbers**: Test with large integers to check for overflow issues (e.g., add(1000000, 2000000)).",
+            "6. **Boundary Tests**: Test with boundary values (e.g., add(Integer.MAX_VALUE, 1)).",
+            "7. **Non-integer Inputs**: Test with non-integer inputs if the function should handle them (e.g., add(2.5, 3.5))."
+        ]
+    },
+    {
+        "question": "What is API Testing, Models, Admin, and Types of APIs?",
+        "answers": [
+            "API Testing involves testing Application Programming Interfaces (APIs) directly and as part of integration testing to determine if they meet expectations for functionality, reliability, performance, and security.",
+            "Models in API testing refer to the data structures that APIs use to communicate. These models define the format of the data exchanged between the client and server.",
+            "Admin in the context of APIs typically refers to the administrative tasks involved in managing APIs, such as setting up API keys, monitoring usage, and managing access controls.",
+            "Types of APIs include:",
+            "1. **Open APIs**: Publicly available APIs that can be used by any developer.",
+            "2. **Internal APIs**: Private APIs used within an organization to connect systems and data.",
+            "3. **Partner APIs**: APIs shared with specific business partners to facilitate integration.",
+            "4. **Composite APIs**: APIs that combine multiple data or service APIs."
+        ]
+    }
+
+]
