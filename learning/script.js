@@ -99,10 +99,10 @@ allQuestionsBtn.addEventListener('click', () => {
 // Show all questions with answers when "Show All Questions with Answers" is clicked
 allQuestionsAnswersBtn.addEventListener('click', () => {
     if (questions.length > 0) {
-    const allQuestionsAnswersHtml = questions.map(q => {
-        const answersHtml = q.answers.map(answer => `<pre class="wrapped-text" style="margin-top: 10px;">${escapeHtml(answer)}</pre>`).join('<hr style="border: none; height: 1px; background: #FFF; margin: 10px 15%; width: 70%;">');
-        return `<li style="margin-bottom: 20px;"><strong>${q.question}</strong><br>${answersHtml}</li>`;
-    }).join('<hr style="border: none; height: 2px; background: #4CAF50;">');
+        const allQuestionsAnswersHtml = questions.map(q => {
+            const answersHtml = q.answers.map(answer => `<pre class="wrapped-text" style="margin-top: 10px;">${escapeHtml(answer)}</pre>`).join('<hr style="border: none; height: 1px; background: #FFF; margin: 10px 15%; width: 70%;">');
+            return `<li style="margin-bottom: 20px;"><strong style="background-color: #A5D6A7; color: #1B5E20; display: block; padding: 10px; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">${q.question}</strong><br>${answersHtml}</li>`;
+        }).join('<hr style="border: none; height: 2px; background: #A5D6A7;">');
         questionDiv.innerHTML = `<strong>All Questions with Answers:</strong><ul>${allQuestionsAnswersHtml}</ul>`;
         answerDiv.innerHTML = ''; // Clear previous answers
     } else {

@@ -181,18 +181,18 @@ section.work {
     font-family: 'Lato', sans-serif;
 }
 
-section.work .card-wrapper {
+.card-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
 }
 
-section.work .card-wrapper .card {
+.card-wrapper .card {
     height: 250px;
     position: relative;
 }
 
-section.work .card-wrapper .card .overlay {
+.card-wrapper .card .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -210,22 +210,21 @@ section.work .card-wrapper .card .overlay {
     transition: opacity 0.3s ease;
 }
 
-section.work .card-wrapper .card:hover .overlay {
+.card-wrapper .card:hover .overlay {
     opacity: 1;
 }
 
-section.work .card-wrapper .card .overlay a {
+.card-wrapper .card .overlay a {
     color: rgba(43, 31, 31, 0.8);
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-section.work .card-wrapper .card .overlay a:hover {
+.card-wrapper .card .overlay a:hover {
     color: rgba(43, 31, 31, 1);
 }
-
-section.work .card-wrapper .card img {
+.card-wrapper .card img {
     height: 100%;
     width: 100%;
 }
@@ -238,9 +237,7 @@ section.award {
     padding-bottom: 18rem;
 }
 
-section .award-img {
-    width: 500px;
-}
+
 
 h2{
     margin-bottom: 2rem;
@@ -480,7 +477,7 @@ footer .copyright {
         height: 360px;
     }
 
-    section.work .card-wrapper {
+    .card-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -547,7 +544,7 @@ footer .copyright {
         padding-bottom: 8rem;
     }
 
-    section.work .card-wrapper {
+    .card-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
 

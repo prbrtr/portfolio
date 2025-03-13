@@ -1,4 +1,6 @@
-
+.container a{
+    font-size: 17px;
+}
 .tech-articles {
     padding: 50px 0; /* Vertical padding */
 }
