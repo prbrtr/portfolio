@@ -39,6 +39,9 @@ header {
     padding: 0 15px;
     margin: 0 auto;
 }
+.about-me-img{
+    height: 360px;
+}
 
 header nav .left a {
     color: var(--pure);
