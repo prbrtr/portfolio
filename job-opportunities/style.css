@@ -61,6 +61,7 @@
     max-width: 1152px;
     padding: 0 15px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .section-heading {
@@ -77,7 +78,7 @@
 
 
 .job-links a {
-    display: block;
+    display: inline-block;
     padding: 10px 20px;
     margin: 10px;
     background-color: #4CAF50;
